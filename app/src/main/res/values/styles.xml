@@ -1,0 +1,10 @@
+<resources>
+    <!-- ToggleOverlay Style -->
+    <style name="ToggleOverlay">
+        <item name="android:background">@drawable/toggle_overlay_bg</item>
+    </style>
+
+    <style name="CalculateOverlay">
+        <item name="android:background">@drawable/calculate_overlay_bg</item>
+    </style>
+</resources>

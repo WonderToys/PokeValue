@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="@style/CalculateOverlay"
+    android:padding="6dp">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableForm"
+        android:visibility="visible">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <AutoCompleteTextView
+                android:layout_weight="1"
+                android:id="@+id/fieldPokemonName"
+                android:hint="Pokemon"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:editable="true"
+                android:textColor="#333333"
+                android:textColorHint="#80333333" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_weight="1"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/fieldCombatPower"
+                android:hint="CP"
+                android:imeOptions="actionNext"
+                android:editable="true"
+                android:textColor="#333333"
+                android:textColorHint="#80333333" />
+
+            <EditText
+                android:layout_weight="1"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/fieldHitPoints"
+                android:hint="HP"
+                android:imeOptions="actionNext"
+                android:editable="true"
+                android:textColor="#333333"
+                android:textColorHint="#80333333" />
+
+            <AutoCompleteTextView
+                android:layout_weight="1"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/fieldDustCost"
+                android:hint="Dust"
+                android:imeOptions="actionDone"
+                android:editable="true"
+                android:textColor="#333333"
+                android:textColorHint="#80333333" />
+        </TableRow>
+
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+            <Switch
+                android:text="Powered?"
+                android:id="@+id/switchPoweredUp"
+                android:layout_weight="1"
+                android:textColor="#333333" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_weight="1"
+                android:text="Close"
+                android:id="@+id/buttonClose"
+                android:backgroundTint="#d32f2f"
+                android:textColor="@color/colorWhite"/>
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_weight="1"
+                android:text="Calculate"
+                android:id="@+id/buttonCalc"
+                android:backgroundTint="#0097a7"
+                android:textColor="@color/colorWhite" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableResult"
+        android:stretchColumns="*"
+        android:visibility="invisible">
+
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0%"
+                android:id="@+id/textMinIV"
+                android:textColor="#c62828"
+                android:textAlignment="center"
+                android:textSize="32dp" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="/"
+                android:id="@+id/textView"
+                android:textColor="#333333"
+                android:textAlignment="center"
+                android:textSize="32dp" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0%"
+                android:id="@+id/textAvgIV"
+                android:textColor="#1565c0"
+                android:textAlignment="center"
+                android:textSize="32dp" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="/"
+                android:id="@+id/textView2"
+                android:textColor="#333333"
+                android:textAlignment="center"
+                android:textSize="32dp" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0%"
+                android:id="@+id/textMaxIV"
+                android:textColor="#2e7d32"
+                android:textAlignment="center"
+                android:textSize="32dp" />
+        </TableRow>
+
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_span="6"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Max Potential Stats:"
+                android:id="@+id/textView6"
+                android:textColor="#75333333"
+                android:textSize="16dp" />
+
+        </TableRow>
+
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="ATK ="
+                android:id="@+id/textView3"
+                android:textColor="#333333"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:textColor="#1565c0"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:id="@+id/textAttackIV" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="DEF ="
+                android:id="@+id/textView4"
+                android:textColor="#333333"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:id="@+id/textDefenseIV"
+                android:textColor="#1565c0"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="STAM ="
+                android:id="@+id/textView5"
+                android:textColor="#333333"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_weight="1"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="0"
+                android:id="@+id/textStaminaIV"
+                android:textColor="#1565c0"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+        </TableRow>
+
+        <TableRow android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_weight="1"
+                android:layout_span="5"
+                android:text="Back"
+                android:id="@+id/buttonBack"
+                android:backgroundTint="#0097a7"
+                android:textColor="@color/colorWhite" />
+        </TableRow>
+
+    </TableLayout>
+
+</RelativeLayout>
