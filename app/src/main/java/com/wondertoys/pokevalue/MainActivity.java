@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void showToggleOverlay() {
         Intent intent = new Intent(this, ToggleOverlayService.class);
         startService(intent);
-        //finish();
+        finish();
     }
 
     private void setReleaseNotes() {

@@ -8,33 +8,24 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
+import java.util.HashMap;
 
-public class LevelUpData {
+public final class LevelData {
     //region - Fields -
-    public int level;
-    public int dust;
-    public int candy;
-
-    public double cpScalar;
-    //endregion
-
-    //region - Constructor -
-    public LevelUpData(int level, int dust, int candy, double cpScalar) {
-        this.level = level;
-        this.dust = dust;
-        this.candy = candy;
-        this.cpScalar = cpScalar;
-    }
-    //endregion
+    private static HashMap<Double, Double> stats;
+    //region
 
     //region - Static -
-    public static ArrayList<LevelUpData> loadAllLevelUpData(AssetManager assets) {
-        ArrayList<LevelUpData> list = new ArrayList<LevelUpData>();
+    public static double getCpScalar(double level) {
+        return stats.get(level);
+    }
+
+    public static void loadData(AssetManager assets) {
+        stats = new HashMap<>();
 
         String json = null;
         try {
-            InputStream is = assets.open("levelUpData.json");
+            InputStream is = assets.open("levelData.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -43,7 +34,6 @@ public class LevelUpData {
         }
         catch ( IOException ex ) {
             ex.printStackTrace();
-            return list;
         }
 
         try {
@@ -52,18 +42,14 @@ public class LevelUpData {
             for (int i = 0; i < array.length(); i++) {
                 JSONObject obj = array.getJSONObject(i);
 
-                int level = obj.getInt("level");
-                int dust = obj.getInt("dust");
-                int candy = obj.getInt("candy");
+                double level = obj.getDouble("level");
                 double cpScalar = obj.getDouble("cpScalar");
 
-                list.add(new LevelUpData(level, dust, candy, cpScalar));
+                stats.put(level, cpScalar);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-
-        return list;
     }
     //endregion
 }

@@ -8,6 +8,11 @@
 <br />
 <strong><big>Release Notes</big></strong><br />
 <br />
+<strong>v0.3.0</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Major improvements to the IV calculation<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- UI updates to the results screen<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Min and Max Perfections are now clickable, which will show you the stats<br />
+<br />
 <strong>v0.2.0</strong><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Add this new "Splash" screen<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The tray is now opened by clicking the "Open Tray" button, rather than automatically<br />

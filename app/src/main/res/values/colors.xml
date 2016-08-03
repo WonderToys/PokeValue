@@ -4,5 +4,7 @@
     <color name="colorPrimaryDark">#1a237e</color>
     <color name="colorAccent">#FF4081</color>
 
+    <color name="colorDeepPurple">#5e35b1</color>
+
     <color name="colorWhite">#ffffff</color>
 </resources>

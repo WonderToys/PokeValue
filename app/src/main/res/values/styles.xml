@@ -2,6 +2,8 @@
     <!-- AppStyle -->
     <style name="AppStyle" parent="Theme.AppCompat">
         <item name="colorPrimary">#4527a0</item>
+        <item name="colorPrimaryDark">#4527a0</item>
+        <item name="colorAccent">#4527a0</item>
     </style>
 
     <!-- ToggleOverlay Style -->

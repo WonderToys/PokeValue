@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     style="@style/CalculateOverlay"
+    android:id="@+id/rootCalculateLayout"
     android:padding="6dp">
 
     <TableLayout
@@ -101,121 +103,45 @@
 
         <TableRow android:layout_width="fill_parent"
             android:layout_height="match_parent">
-            <TextView
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/minPerfection"
                 android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="0%"
-                android:id="@+id/textMinIV"
-                android:textColor="#c62828"
-                android:textAlignment="center"
-                android:textSize="32dp" />
+                app:arc_bottom_text="Min"
+                app:arc_max="100"
+                app:arc_finished_color="#c62828"
+                app:arc_unfinished_color="#25c62828"
+                app:arc_text_color="#c62828"
+                android:layout_height="85dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp" />
 
-            <TextView
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/avgPerfection"
                 android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="/"
-                android:id="@+id/textView"
-                android:textColor="#333333"
-                android:textAlignment="center"
-                android:textSize="32dp" />
+                app:arc_bottom_text="Avg"
+                app:arc_max="100"
+                app:arc_finished_color="#1565c0"
+                app:arc_unfinished_color="#251565c0"
+                app:arc_text_color="#1565c0"
+                android:layout_height="85dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp" />
 
-            <TextView
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/maxPerfection"
                 android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="0%"
-                android:id="@+id/textAvgIV"
-                android:textColor="#1565c0"
-                android:textAlignment="center"
-                android:textSize="32dp" />
-
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="/"
-                android:id="@+id/textView2"
-                android:textColor="#333333"
-                android:textAlignment="center"
-                android:textSize="32dp" />
-
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="0%"
-                android:id="@+id/textMaxIV"
-                android:textColor="#2e7d32"
-                android:textAlignment="center"
-                android:textSize="32dp" />
-        </TableRow>
-
-        <TableRow android:layout_width="fill_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_weight="1"
-                android:layout_span="6"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Max Potential Stats:"
-                android:id="@+id/textView6"
-                android:textColor="#75333333"
-                android:textSize="16dp" />
-
-        </TableRow>
-
-        <TableRow android:layout_width="fill_parent"
-            android:layout_height="match_parent">
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="ATK ="
-                android:id="@+id/textView3"
-                android:textColor="#333333"
-                android:textAlignment="center"
-                android:textSize="18dp" />
-
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="0"
-                android:textColor="#1565c0"
-                android:textSize="18dp"
-                android:textAlignment="center"
-                android:id="@+id/textAttackIV" />
-
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="DEF ="
-                android:id="@+id/textView4"
-                android:textColor="#333333"
-                android:textAlignment="center"
-                android:textSize="18dp" />
-
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="0"
-                android:id="@+id/textDefenseIV"
-                android:textColor="#1565c0"
-                android:textAlignment="center"
-                android:textSize="18dp" />
-
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="STAM ="
-                android:id="@+id/textView5"
-                android:textColor="#333333"
-                android:textAlignment="center"
-                android:textSize="18dp" />
-
-            <TextView
-                android:layout_weight="1"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="0"
-                android:id="@+id/textStaminaIV"
-                android:textColor="#1565c0"
-                android:textAlignment="center"
-                android:textSize="18dp" />
+                app:arc_bottom_text="Max"
+                app:arc_max="100"
+                app:arc_finished_color="#2e7d32"
+                app:arc_unfinished_color="#252e7d32"
+                app:arc_text_color="#2e7d32"
+                android:layout_height="85dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp" />
 
         </TableRow>
 
@@ -225,7 +151,6 @@
             <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_weight="1"
-                android:layout_span="5"
                 android:text="Back"
                 android:id="@+id/buttonBack"
                 android:backgroundTint="#0097a7"
