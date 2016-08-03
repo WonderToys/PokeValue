@@ -1,9 +1,15 @@
 <resources>
+    <!-- AppStyle -->
+    <style name="AppStyle" parent="Theme.AppCompat">
+        <item name="colorPrimary">#4527a0</item>
+    </style>
+
     <!-- ToggleOverlay Style -->
     <style name="ToggleOverlay">
         <item name="android:background">@drawable/toggle_overlay_bg</item>
     </style>
 
+    <!-- CalculateOverlay Style -->
     <style name="CalculateOverlay">
         <item name="android:background">@drawable/calculate_overlay_bg</item>
     </style>

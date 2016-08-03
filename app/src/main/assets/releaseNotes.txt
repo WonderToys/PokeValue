@@ -1,0 +1,18 @@
+<strong><big>Usage</big></strong><br />
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Click "Open Tray"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tap the 3 dots to toggle the tray expanded and collapsed<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tap the "E" icon to open the Calculate window<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Long press the tray (or Calculate window) to move it<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tap the "X" icon to close the tray<br />
+<br />
+<strong><big>Release Notes</big></strong><br />
+<br />
+<strong>v0.2.0</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Add this new "Splash" screen<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The tray is now opened by clicking the "Open Tray" button, rather than automatically<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The keyboard should now close when clicking "Calculate" or "Close"<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The "Powered?" option is now a CheckBox<br />
+<br />
+<strong>v0.1.0</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Initial release, yay! :)

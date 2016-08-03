@@ -67,11 +67,11 @@
 
         <TableRow android:layout_width="fill_parent"
             android:layout_height="match_parent">
-            <Switch
-                android:text="Powered?"
-                android:id="@+id/switchPoweredUp"
+            <CheckBox
                 android:layout_weight="1"
-                android:textColor="#333333" />
+                android:id="@+id/checkPowered"
+                android:textColor="#333333"
+                android:text="Powered?" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"

@@ -11,11 +11,12 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import com.wondertoys.pokevalue.utils.EvaluationData;
@@ -49,7 +50,7 @@ public class CalculateOverlayService extends Service implements View.OnClickList
     private EditText fieldCombatPower;
     private EditText fieldHitPoints;
 
-    private Switch switchPoweredUp;
+    private CheckBox checkPoweredUp;
 
     private WindowManager windowManager;
     //endregion
@@ -99,7 +100,7 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         }
 
         if ( valid == true ) {
-            return new EvaluationData(poke, Integer.parseInt(cpValue), Integer.parseInt(hpValue), Integer.parseInt(dustValue), switchPoweredUp.isChecked());
+            return new EvaluationData(poke, Integer.parseInt(cpValue), Integer.parseInt(hpValue), Integer.parseInt(dustValue), checkPoweredUp.isChecked());
         }
 
         return null;
@@ -200,11 +201,11 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         fieldHitPoints.setOnTouchListener(this);
         fieldHitPoints.setOnLongClickListener(this);
 
-        // Switches
-        switchPoweredUp = (Switch)calculateOverlay.findViewById(R.id.switchPoweredUp);
-        switchPoweredUp.setLongClickable(true);
-        switchPoweredUp.setOnTouchListener(this);
-        switchPoweredUp.setOnLongClickListener(this);
+        // CheckBoxes
+        checkPoweredUp = (CheckBox)calculateOverlay.findViewById(R.id.checkPowered);
+        checkPoweredUp.setLongClickable(true);
+        checkPoweredUp.setOnTouchListener(this);
+        checkPoweredUp.setOnLongClickListener(this);
 
         // Tables
         tableForm = calculateOverlay.findViewById(R.id.tableForm);
@@ -252,7 +253,7 @@ public class CalculateOverlayService extends Service implements View.OnClickList
             fieldDustCost = null;
             fieldCombatPower = null;
             fieldPokemonName = null;
-            switchPoweredUp = null;
+            checkPoweredUp = null;
 
             tableForm = null;
             tableResults = null;
@@ -268,6 +269,9 @@ public class CalculateOverlayService extends Service implements View.OnClickList
 
             Intent intent = new Intent(getApplicationContext(), ToggleOverlayService.class);
             startService(intent);
+
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(calculateOverlay.getWindowToken(), 0);
         }
         else if ( v.getId() == R.id.buttonCalc ) {
             EvaluationData ed = getEvaluationData();
@@ -298,12 +302,18 @@ public class CalculateOverlayService extends Service implements View.OnClickList
 
                     tableForm.setVisibility(View.INVISIBLE);
                     tableResults.setVisibility(View.VISIBLE);
+
+                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                    imm.hideSoftInputFromWindow(calculateOverlay.getWindowToken(), 0);
                 }
             }
         }
         else if ( v.getId() == R.id.buttonBack ) {
             tableResults.setVisibility(View.INVISIBLE);
             tableForm.setVisibility(View.VISIBLE);
+
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(calculateOverlay.getWindowToken(), 0);
         }
     }
 

@@ -6,6 +6,7 @@
             <corners android:topLeftRadius="4dp" android:bottomLeftRadius="4dp"></corners>
         </shape>
     </item>
+
     <!-- CONTENT LAYER -->
     <item android:left="1.5dp" android:bottom="1.5dp">
         <shape android:shape="rectangle">

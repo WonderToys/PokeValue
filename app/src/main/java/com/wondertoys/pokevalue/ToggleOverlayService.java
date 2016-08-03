@@ -182,8 +182,8 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
         else if ( v.getId() == R.id.imageExit ) {
             final Context ctx = this;
             AlertDialog.Builder builder = new AlertDialog.Builder(this.getApplicationContext());
-            builder.setTitle("Exit?")
-                    .setMessage("Are you sure you want to exit PokeValue?")
+            builder.setTitle("Close Tray?")
+                    .setMessage("Are you sure you want to close the PokeValue tray?")
                     .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int id) {
                             stopService(new Intent(ctx, ToggleOverlayService.class));
