@@ -1,3 +1,9 @@
+# Screenshots
+
+                           |                          
+:-------------------------:|:-------------------------:
+![](http://i.imgur.com/GLCqFj3.png)  |  ![](http://i.imgur.com/g3kTHr6.png)
+
 # Installation Instructions
 
 - Enable "Unknown Sources" (Security > Unknown Sources)  
