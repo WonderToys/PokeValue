@@ -1,4 +1,4 @@
-# [Screenshots](http://imgur.com/gallery/berY5)
+## [Screenshots](http://imgur.com/gallery/berY5)
 
 # Installation Instructions
 
