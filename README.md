@@ -1,8 +1,4 @@
-# Screenshots
-
-                           |                          
-:-------------------------:|:-------------------------:
-![](http://i.imgur.com/GLCqFj3.png)  |  ![](http://i.imgur.com/g3kTHr6.png)
+# [Screenshots](http://imgur.com/gallery/berY5)
 
 # Installation Instructions
 
