@@ -6,7 +6,20 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Long press the tray (or Calculate window) to move it<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Tap the "X" icon to close the tray<br />
 <br />
+<strong><big>Known Issues</big></strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The app currently lacks any settings.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- I still need a legit app icon. Any artists out there? Reach me on reddit at /u/WonderToys :)<br />
+<br />
 <strong><big>Release Notes</big></strong><br />
+<br />
+<strong>v0.4.0</strong><br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Some permissions have been added to accomplish the below changes<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The Avg. Perfection circle is now clickable, which will show you the stats<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- The app will now automatically check for updates. This will be under settings in v0.5.0<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- You will now be notified if no possible IVs are found<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Added a few (very) minor UI enhancements<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Added minor haptic feedback to all clickable buttons<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Minor text fixes<br />
 <br />
 <strong>v0.3.0</strong><br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Major improvements to the IV calculation<br />

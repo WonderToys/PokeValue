@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.IBinder;
+import android.os.Vibrator;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -167,6 +168,12 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
 
     @Override
     public void onClick(View v) {
+        Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+
+        if ( vibrator.hasVibrator() ) {
+            vibrator.vibrate(30);
+        }
+
         if ( v.getId() == R.id.imageMore ) {
             WindowManager.LayoutParams params = (WindowManager.LayoutParams)toggleLayout.getLayoutParams();
             if ( isOpen ) {

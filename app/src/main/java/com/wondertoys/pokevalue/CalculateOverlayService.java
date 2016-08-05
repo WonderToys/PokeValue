@@ -4,14 +4,18 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.graphics.PorterDuff;
 import android.os.IBinder;
+import android.os.Vibrator;
+import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -19,7 +23,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import com.github.lzyzsd.circleprogress.ArcProgress;
 import com.tomergoldst.tooltips.ToolTip;
@@ -31,7 +34,9 @@ import com.wondertoys.pokevalue.utils.Pokemon;
 import java.util.ArrayList;
 
 
-public class CalculateOverlayService extends Service implements View.OnClickListener, View.OnTouchListener, View.OnLongClickListener {
+public class CalculateOverlayService extends Service implements View.OnClickListener, View.OnTouchListener,
+        View.OnLongClickListener, ToolTipsManager.TipListener {
+
     //region - Classes -
     private class EvaluationData {
         public Pokemon pokemon;
@@ -56,9 +61,17 @@ public class CalculateOverlayService extends Service implements View.OnClickList
     private ArrayList<Pokemon> pokemonList;
     ArrayList<Pokemon.Potential> potentials;
 
+    private Pokemon.Potential minPotential;
+    private Pokemon.Potential avgPotential;
+    private Pokemon.Potential maxPotential;
+
+    ToolTip statsToolTip;
+
     private View calculateOverlay;
     private View tableForm;
     private View tableResults;
+
+    RelativeLayout rootView;
 
     private AutoCompleteTextView fieldPokemonName;
     private AutoCompleteTextView fieldDustCost;
@@ -67,6 +80,10 @@ public class CalculateOverlayService extends Service implements View.OnClickList
     private EditText fieldHitPoints;
 
     private CheckBox checkPoweredUp;
+
+    private ArcProgress minPerfection;
+    private ArcProgress avgPerfection;
+    private ArcProgress maxPerfection;
 
     private WindowManager windowManager;
     private ToolTipsManager toolTipsManager;
@@ -86,6 +103,12 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         return poke;
     }
 
+    private void shakeMe() {
+        Animation shake = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.shake);
+        tableForm.startAnimation(shake);
+    }
+
+    @Nullable
     private EvaluationData getEvaluationData() {
         Boolean valid = true;
 
@@ -125,6 +148,9 @@ public class CalculateOverlayService extends Service implements View.OnClickList
             ed.powered = checkPoweredUp.isChecked();
 
             return ed;
+        }
+        else {
+            shakeMe();
         }
 
         return null;
@@ -193,6 +219,9 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         buttonBack.setOnTouchListener(this);
         buttonBack.setOnLongClickListener(this);
 
+        // GetRootView
+        rootView = (RelativeLayout)calculateOverlay.findViewById(R.id.rootCalculateLayout);
+
         // AutoCompletes
         ArrayAdapter<String> pokemonNamesAdapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, getPokemonNames());
@@ -236,17 +265,49 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         tableResults = calculateOverlay.findViewById(R.id.tableResult);
 
         // Arcs
-        View minPerfection = calculateOverlay.findViewById(R.id.minPerfection);
+        minPerfection = (ArcProgress)calculateOverlay.findViewById(R.id.minPerfection);
         minPerfection.setClickable(true);
         minPerfection.setOnClickListener(this);
 
-        View maxPerfection = calculateOverlay.findViewById(R.id.maxPerfection);
+        avgPerfection = (ArcProgress)calculateOverlay.findViewById(R.id.avgPerfection);
+        avgPerfection.setClickable(true);
+        avgPerfection.setOnClickListener(this);
+
+        maxPerfection = (ArcProgress)calculateOverlay.findViewById(R.id.maxPerfection);
         maxPerfection.setClickable(true);
         maxPerfection.setOnClickListener(this);
 
         // Add View
         windowManager = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
         windowManager.addView(calculateOverlay, getViewParams());
+    }
+
+    private void hideToolTip() {
+        if ( statsToolTip != null ) {
+            toolTipsManager.findAndDismiss(minPerfection);
+            toolTipsManager.findAndDismiss(avgPerfection);
+            toolTipsManager.findAndDismiss(maxPerfection);
+        }
+    }
+
+    private void showToolTip(View v, String text, int alignment) {
+        if ( statsToolTip != null ) {
+            int currentViewId = statsToolTip.getAnchorView().getId();
+
+            hideToolTip();
+
+            if ( currentViewId == v.getId() ) return;
+        }
+
+        // Create ToolTip
+        ToolTip.Builder builder = new ToolTip.Builder(getApplicationContext(), v, rootView, text, ToolTip.POSITION_BELOW);
+        builder.setAlign(alignment);
+        builder.setOffsetY(-15);
+        builder.setBackgroundColor(getResources().getColor(R.color.colorDeepPurple));
+
+        statsToolTip = builder.build();
+
+        toolTipsManager.show(statsToolTip);
     }
     //endregion
 
@@ -258,7 +319,7 @@ public class CalculateOverlayService extends Service implements View.OnClickList
 
     @Override
     public void onCreate() {
-        toolTipsManager = new ToolTipsManager();
+        toolTipsManager = new ToolTipsManager(this);
 
         pokemonList = Pokemon.loadAllPokemon(getAssets());
         LevelData.loadData(getAssets());
@@ -273,6 +334,10 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         if ( calculateOverlay != null ) {
             windowManager.removeView(calculateOverlay);
 
+            minPotential = null;
+            avgPotential = null;
+            maxPotential = null;
+
             pokemonList = null;
             potentials = null;
 
@@ -280,10 +345,19 @@ public class CalculateOverlayService extends Service implements View.OnClickList
             fieldDustCost = null;
             fieldCombatPower = null;
             fieldPokemonName = null;
+
+            statsToolTip = null;
+
             checkPoweredUp = null;
+
+            minPerfection = null;
+            avgPerfection = null;
+            maxPerfection = null;
 
             tableForm = null;
             tableResults = null;
+
+            rootView = null;
 
             calculateOverlay = null;
             toolTipsManager = null;
@@ -292,6 +366,12 @@ public class CalculateOverlayService extends Service implements View.OnClickList
 
     @Override
     public void onClick(View v) {
+        Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
+
+        if ( vibrator.hasVibrator() ) {
+            vibrator.vibrate(30);
+        }
+
         if ( v.getId() == R.id.buttonClose ) {
             stopService(new Intent(this, CalculateOverlayService.class));
 
@@ -308,34 +388,84 @@ public class CalculateOverlayService extends Service implements View.OnClickList
             if ( ed != null ) {
                 potentials = ed.pokemon.evaluate(ed.cp, ed.hp, ed.dust, ed.powered);
 
-                if ( potentials.size() > 0 ) {
-                    Pokemon.Potential maxPossible = potentials.get(potentials.size() - 1);
+                int potentialsSize = potentials.size();
+                if ( potentialsSize == 0 ) {
+                    fieldPokemonName.setError("No potentials found!");
+                    fieldCombatPower.setError("No potentials found!");
+                    fieldHitPoints.setError("No potentials found!");
+                    fieldDustCost.setError("No potentials found!");
 
-                    int min = (int) potentials.get(0).perfection;
-                    int max = (int) maxPossible.perfection;
-                    int average = 0;
+                    shakeMe();
 
-                    int total = 0;
-                    for (Pokemon.Potential piv : potentials) {
-                        total += piv.perfection;
-                    }
-
-                    average = (total / potentials.size());
-
-                    ((ArcProgress) calculateOverlay.findViewById(R.id.minPerfection)).setProgress(min);
-                    ((ArcProgress) calculateOverlay.findViewById(R.id.avgPerfection)).setProgress(average);
-                    ((ArcProgress) calculateOverlay.findViewById(R.id.maxPerfection)).setProgress(max);
-
-
-                    tableForm.setVisibility(View.INVISIBLE);
-                    tableResults.setVisibility(View.VISIBLE);
-
-                    InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
-                    imm.hideSoftInputFromWindow(calculateOverlay.getWindowToken(), 0);
+                    return;
                 }
+
+                fieldPokemonName.setError(null);
+                fieldCombatPower.setError(null);
+                fieldHitPoints.setError(null);
+                fieldDustCost.setError(null);
+
+                // Get AveragePotential
+                int totalPerfection = 0;
+                int totalAttack = 0;
+                int totalDefense = 0;
+                int totalStamina = 0;
+                double totalLevel = 0;
+                for (Pokemon.Potential piv : potentials) {
+                    totalPerfection += piv.perfection;
+
+                    totalAttack += piv.attack;
+                    totalDefense += piv.defense;
+                    totalStamina += piv.stamina;
+
+                    totalLevel = piv.level;
+                }
+
+                int avgPerf = (totalPerfection / potentialsSize);
+                int avgAttack = (totalAttack / potentialsSize);
+                int avgDefense = (totalDefense / potentialsSize);
+                int avgStamina = (totalStamina / potentialsSize);
+                double avgLevel = (totalLevel / potentialsSize);
+
+                // Get Potentials
+                avgPotential = new Pokemon.Potential();
+                avgPotential.perfection = avgPerf;
+                avgPotential.attack = avgAttack;
+                avgPotential.defense = avgDefense;
+                avgPotential.stamina = avgStamina;
+                avgPotential.level = Math.floor(avgLevel) + 0.5;
+
+                minPotential = potentials.get(0);
+                maxPotential = potentials.get(potentials.size() - 1);
+
+                // Set Values
+                minPerfection.setProgress((int)minPotential.perfection);
+                avgPerfection.setProgress((int)avgPotential.perfection);
+                maxPerfection.setProgress((int)maxPotential.perfection);
+
+
+                Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_out);
+                Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_in);
+
+                tableForm.startAnimation(animFadeOut);
+                tableResults.setAnimation(animFadeIn);
+
+                tableForm.setVisibility(View.INVISIBLE);
+                tableResults.setVisibility(View.VISIBLE);
+
+                InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(calculateOverlay.getWindowToken(), 0);
             }
         }
         else if ( v.getId() == R.id.buttonBack ) {
+            hideToolTip();
+
+            Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_out);
+            Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_in);
+
+            tableResults.setAnimation(animFadeOut);
+            tableForm.startAnimation(animFadeIn);
+
             tableResults.setVisibility(View.INVISIBLE);
             tableForm.setVisibility(View.VISIBLE);
 
@@ -344,30 +474,26 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         }
         else if ( v.getId() == R.id.minPerfection ) {
             if ( potentials != null ) {
-                Pokemon.Potential min = potentials.get(0);
-                String text = String.format("Lvl. %d; Atk. %d; Def. %d; Stam. %d", (int)min.level, min.attack, min.defense, min.stamina);
+                Pokemon.Potential potential = minPotential;
+                String text = String.format("Lvl. %.1f; Atk. %d; Def. %d; Stam. %d", potential.level, potential.attack, potential.defense, potential.stamina);
 
-                RelativeLayout rootView = (RelativeLayout)calculateOverlay.findViewById(R.id.rootCalculateLayout);
-                ToolTip.Builder builder = new ToolTip.Builder(getApplicationContext(), v, rootView, text, ToolTip.POSITION_BELOW);
-                builder.setAlign(ToolTip.ALIGN_LEFT);
-                builder.setOffsetY(-15);
-                builder.setBackgroundColor(getResources().getColor(R.color.colorDeepPurple));
+                showToolTip(v, text, ToolTip.ALIGN_LEFT);
+            }
+        }
+        else if ( v.getId() == R.id.avgPerfection ) {
+            if ( potentials != null ) {
+                Pokemon.Potential potential = avgPotential;
+                String text = String.format("Lvl. %.1f; Atk. %d; Def. %d; Stam. %d", potential.level, potential.attack, potential.defense, potential.stamina);
 
-                toolTipsManager.show(builder.build());
+                showToolTip(v, text, ToolTip.ALIGN_CENTER);
             }
         }
         else if ( v.getId() == R.id.maxPerfection ) {
             if ( potentials != null ) {
-                Pokemon.Potential min = potentials.get(potentials.size() - 1);
-                String text = String.format("Lvl. %d; Atk. %d; Def. %d; Stam. %d", (int)min.level, min.attack, min.defense, min.stamina);
+                Pokemon.Potential potential = maxPotential;
+                String text = String.format("Lvl. %.1f; Atk. %d; Def. %d; Stam. %d", potential.level, potential.attack, potential.defense, potential.stamina);
 
-                RelativeLayout rootView = (RelativeLayout)calculateOverlay.findViewById(R.id.rootCalculateLayout);
-                ToolTip.Builder builder = new ToolTip.Builder(getApplicationContext(), v, rootView, text, ToolTip.POSITION_BELOW);
-                builder.setAlign(ToolTip.ALIGN_RIGHT);
-                builder.setOffsetY(-15);
-                builder.setBackgroundColor(getResources().getColor(R.color.colorDeepPurple));
-
-                toolTipsManager.show(builder.build());
+                showToolTip(v, text, ToolTip.ALIGN_RIGHT);
             }
         }
     }
@@ -426,6 +552,11 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         isMovable = true;
 
         return true;
+    }
+
+    @Override
+    public void onTipDismissed(View view, int anchorViewId, boolean byUser) {
+        statsToolTip = null;
     }
     //endregion
 }

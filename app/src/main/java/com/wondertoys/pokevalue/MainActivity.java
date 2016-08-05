@@ -14,11 +14,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.wondertoys.pokevalue.utils.AutoUpdateApk;
+
 import java.io.IOException;
 import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     public final static int REQUEST_CODE = 1234;
+
+    private AutoUpdateApk aua;
 
     private void showToggleOverlay() {
         Intent intent = new Intent(this, ToggleOverlayService.class);
@@ -54,6 +58,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonOpenTray.setOnClickListener(this);
 
         setReleaseNotes();
+
+        aua = new AutoUpdateApk(getApplicationContext());
     }
 
     @Override
