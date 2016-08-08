@@ -1,4 +1,4 @@
-package com.wondertoys.pokevalue.utils;
+package com.wondertoys.pokevalue.calculator;
 
 import android.content.res.AssetManager;
 

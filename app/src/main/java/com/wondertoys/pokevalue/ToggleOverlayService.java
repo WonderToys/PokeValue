@@ -8,12 +8,19 @@ import android.content.Intent;
 import android.graphics.PixelFormat;
 import android.os.IBinder;
 import android.os.Vibrator;
+import android.text.Layout;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
+import android.view.animation.TranslateAnimation;
+import android.widget.RelativeLayout;
 
 public class ToggleOverlayService extends Service implements View.OnTouchListener, View.OnClickListener, View.OnLongClickListener {
     //region - Fields -
@@ -34,6 +41,8 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
 
     //region - Private Functions -
     private void createToggleWindow() {
+        windowManager = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
+
         LayoutInflater inflater = LayoutInflater.from(this);
         toggleLayout = inflater.inflate(R.layout.toggle_overlay, null);
 
@@ -65,14 +74,13 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
 
         WindowManager.LayoutParams params = new WindowManager.LayoutParams();
         params.y = 250;
-        params.gravity = Gravity.TOP | Gravity.RIGHT;
+        params.gravity = Gravity.TOP | Gravity.END;
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         params.width = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 42, getResources().getDisplayMetrics());
         params.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
         params.flags = WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL;
         params.format = PixelFormat.TRANSLUCENT;
 
-        windowManager = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
         windowManager.addView(toggleLayout, params);
 
         topRightLayout = new View(this);
@@ -176,6 +184,7 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
 
         if ( v.getId() == R.id.imageMore ) {
             WindowManager.LayoutParams params = (WindowManager.LayoutParams)toggleLayout.getLayoutParams();
+
             if ( isOpen ) {
                 params.width = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 42, getResources().getDisplayMetrics());
             }
@@ -184,6 +193,7 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
             }
 
             windowManager.updateViewLayout(toggleLayout, params);
+
             isOpen = !isOpen;
         }
         else if ( v.getId() == R.id.imageExit ) {

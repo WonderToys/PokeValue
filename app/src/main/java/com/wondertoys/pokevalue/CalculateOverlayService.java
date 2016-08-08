@@ -4,7 +4,6 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PixelFormat;
-import android.graphics.PorterDuff;
 import android.os.IBinder;
 import android.os.Vibrator;
 import android.support.annotation.Nullable;
@@ -27,9 +26,9 @@ import android.widget.RelativeLayout;
 import com.github.lzyzsd.circleprogress.ArcProgress;
 import com.tomergoldst.tooltips.ToolTip;
 import com.tomergoldst.tooltips.ToolTipsManager;
-import com.wondertoys.pokevalue.utils.LevelData;
-import com.wondertoys.pokevalue.utils.LevelDustCosts;
-import com.wondertoys.pokevalue.utils.Pokemon;
+import com.wondertoys.pokevalue.calculator.LevelData;
+import com.wondertoys.pokevalue.calculator.LevelDustCosts;
+import com.wondertoys.pokevalue.calculator.Pokemon;
 
 import java.util.ArrayList;
 

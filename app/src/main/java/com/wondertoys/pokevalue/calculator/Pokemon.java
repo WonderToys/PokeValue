@@ -1,8 +1,6 @@
-package com.wondertoys.pokevalue.utils;
+package com.wondertoys.pokevalue.calculator;
 
 import android.content.res.AssetManager;
-
-import com.wondertoys.pokevalue.CalculateOverlayService;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -13,7 +11,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.logging.Level;
 
 public class Pokemon {
     //region - Classes -
@@ -74,10 +71,10 @@ public class Pokemon {
         for ( int attackIV = 0; attackIV <= 15; attackIV++ ) {
             for ( int defenseIV = 0; defenseIV <= 15; defenseIV++ ) {
                 for ( int staminaIV = 0; staminaIV <= 15; staminaIV++ ) {
-                    for ( double level = (minLevel * 2); level <= ((maxLevel * 2) + 1); level++ ) {
-                        if ( powered == false && ((level / 2.0) % 1) != 0 ) continue;
+                    for ( double level = minLevel; level <= (maxLevel + 1); level += 0.50 ) {
+                        if ( powered == false && (level % 1) != 0 ) continue;
 
-                        double cpScalar = LevelData.getCpScalar(level / 2.0);
+                        double cpScalar = LevelData.getCpScalar(level);
 
                         boolean hpOk = hpCheck(hp, staminaIV, cpScalar);
                         boolean cpOk = cpCheck(cp, attackIV, defenseIV, staminaIV, cpScalar);
@@ -89,7 +86,7 @@ public class Pokemon {
                             pot.attack = attackIV;
                             pot.defense = defenseIV;
                             pot.stamina = staminaIV;
-                            pot.level = (level / 2.0);
+                            pot.level = level;
                             pot.perfection = Math.floor(perfection * 100);
 
                             list.add(pot);
