@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.PixelFormat;
+import android.graphics.Point;
 import android.os.IBinder;
 import android.os.Vibrator;
 import android.text.Layout;
@@ -20,7 +21,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
+import com.wondertoys.pokevalue.utils.Preferences;
 
 public class ToggleOverlayService extends Service implements View.OnTouchListener, View.OnClickListener, View.OnLongClickListener {
     //region - Fields -
@@ -37,6 +41,8 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
 
     private View topRightLayout;
     private View toggleLayout;
+
+    ImageView imageMore;
     //endregion
 
     //region - Private Functions -
@@ -51,7 +57,7 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
         toggleLayout.setOnLongClickListener(this);
         toggleLayout.setOnTouchListener(this);
 
-        View imageMore = toggleLayout.findViewById(R.id.imageMore);
+        imageMore = (ImageView)toggleLayout.findViewById(R.id.imageMore);
         imageMore.setClickable(true);
         imageMore.setLongClickable(true);
         imageMore.setOnClickListener(this);
@@ -65,6 +71,13 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
         imageCalc.setOnTouchListener(this);
         imageCalc.setOnLongClickListener(this);
 
+        View imageSettings = toggleLayout.findViewById(R.id.imageSettings);
+        imageSettings.setClickable(true);
+        imageSettings.setLongClickable(true);
+        imageSettings.setOnClickListener(this);
+        imageSettings.setOnTouchListener(this);
+        imageSettings.setOnLongClickListener(this);
+
         View imageExit = toggleLayout.findViewById(R.id.imageExit);
         imageExit.setClickable(true);
         imageExit.setLongClickable(true);
@@ -72,8 +85,11 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
         imageExit.setOnTouchListener(this);
         imageExit.setOnLongClickListener(this);
 
+        Point overlayLoc = Preferences.getToggleOverlayLocation(this);
+
         WindowManager.LayoutParams params = new WindowManager.LayoutParams();
-        params.y = 250;
+        params.y = overlayLoc.y;
+        params.x = overlayLoc.x;
         params.gravity = Gravity.TOP | Gravity.END;
         params.height = WindowManager.LayoutParams.WRAP_CONTENT;
         params.width = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 42, getResources().getDisplayMetrics());
@@ -109,8 +125,10 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
         if ( toggleLayout != null ) {
             windowManager.removeView(toggleLayout);
             windowManager.removeView(topRightLayout);
+
             toggleLayout = null;
             topRightLayout = null;
+            imageMore = null;
         }
     }
 
@@ -159,6 +177,9 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
                 toggleLayout.getBackground().setAlpha(255);
                 isMovable = false;
 
+                WindowManager.LayoutParams params = (WindowManager.LayoutParams)toggleLayout.getLayoutParams();
+                Preferences.setToggleOverlayLocation(this, new Point(params.x, params.y));
+
                 return true;
             }
         }
@@ -179,22 +200,27 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
         Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
 
         if ( vibrator.hasVibrator() ) {
-            vibrator.vibrate(30);
+            vibrator.vibrate(20);
         }
 
         if ( v.getId() == R.id.imageMore ) {
             WindowManager.LayoutParams params = (WindowManager.LayoutParams)toggleLayout.getLayoutParams();
+            int imageResource;
 
             if ( isOpen ) {
                 params.width = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 42, getResources().getDisplayMetrics());
+                imageResource = R.drawable.chevron_left;
             }
             else {
-                params.width = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 116, getResources().getDisplayMetrics());
+                params.width = (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 142, getResources().getDisplayMetrics());
+                imageResource = R.drawable.chevron_right;
             }
 
             windowManager.updateViewLayout(toggleLayout, params);
 
             isOpen = !isOpen;
+
+            imageMore.setImageDrawable(getResources().getDrawable(imageResource));
         }
         else if ( v.getId() == R.id.imageExit ) {
             final Context ctx = this;
@@ -221,6 +247,11 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
 
             Intent intent = new Intent(getApplicationContext(), CalculateOverlayService.class);
             startService(intent);
+        }
+        else if ( v.getId() == R.id.imageSettings ) {
+            Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
     }
     //endregion

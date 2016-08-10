@@ -17,12 +17,14 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/more_vertical"
+            android:src="@drawable/chevron_left"
             android:id="@+id/imageMore"
-            android:layout_alignParentTop="false"
+            android:layout_alignParentTop="true"
             android:layout_alignParentLeft="false"
+            android:layout_alignParentStart="true"
             android:clickable="false"
-            android:padding="6dp" />
+            android:padding="6dp"
+            android:paddingRight="0dp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -33,6 +35,20 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="false"
             android:layout_toEndOf="@id/imageMore"
+            android:paddingRight="6dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:paddingLeft="0dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/settings"
+            android:id="@+id/imageSettings"
+            android:clickable="false"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="false"
+            android:layout_toEndOf="@id/imageCalc"
             android:padding="6dp" />
 
         <ImageView
@@ -41,9 +57,9 @@
             android:src="@drawable/close"
             android:id="@+id/imageExit"
             android:clickable="false"
+            android:padding="6dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="false"
-            android:layout_toEndOf="@id/imageCalc"
-            android:padding="6dp" />
+            android:layout_toEndOf="@id/imageSettings" />
 
 </RelativeLayout>

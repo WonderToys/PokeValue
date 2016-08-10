@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">PokeValue</string>
+    <string name="title_activity_settings">PokeValue Settings</string>
+
+    <string name="potential_tooltip" formatted="false">
+        <![CDATA[
+            Level: %.1f; CP: %d\nAtk: %d (%d); Def: %d (%d); Stam: %d (%d)
+        ]]>
+    </string>
+
+    <string name="pref_auto_update">Auto Update</string>
+    <string name="pref_auto_update_desc">Enable automatic updates of PokeValue</string>
+    <string name="pref_check_for_updates">Check For Updates</string>
 </resources>

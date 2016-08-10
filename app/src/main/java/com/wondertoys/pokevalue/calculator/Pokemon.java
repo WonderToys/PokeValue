@@ -15,9 +15,15 @@ import java.util.Comparator;
 public class Pokemon {
     //region - Classes -
     public static class Potential {
+        public int attackIV;
+        public int defenseIV;
+        public int staminaIV;
+
         public int attack;
         public int defense;
         public int stamina;
+
+        public int cp;
 
         public double level;
         public double perfection;
@@ -43,23 +49,51 @@ public class Pokemon {
     //endregion
 
     //region - Private Methods -
+    private double getDerivedCP(int attackIV, int defenseIV, int staminaIV, double cpScalar) {
+        double derivedAttack = attack + attackIV;
+        double derivedDefense = Math.pow(defense + defenseIV, 0.5);
+        double derivedStamina = Math.pow(stamina + staminaIV, 0.5);
+        double derivedScalar = Math.pow(cpScalar, 2.0);
+
+        return Math.floor((derivedAttack * derivedDefense * derivedStamina * derivedScalar) / 10.0);
+    }
+
     private boolean hpCheck(int hp, int staminaIV, double cpScalar) {
         double derived = Math.floor((this.stamina + staminaIV) * cpScalar);
         return Math.max(10, derived) == hp;
     }
 
     private boolean cpCheck(int cp, int attackIV, int defenseIV, int staminaIV, double cpScalar) {
+        double derivedCP = getDerivedCP(attackIV, defenseIV, staminaIV, cpScalar);
+        return Math.max(10, derivedCP) == cp;
+    }
+    //endregion
+
+    //region - Public Methods -
+    public Potential getPotential(int attackIV, int defenseIV, int staminaIV, double cpScalar) {
         double derivedAttack = attack + attackIV;
         double derivedDefense = Math.pow(defense + defenseIV, 0.5);
         double derivedStamina = Math.pow(stamina + staminaIV, 0.5);
         double derivedScalar = Math.pow(cpScalar, 2.0);
         double derivedCP = Math.floor((derivedAttack * derivedDefense * derivedStamina * derivedScalar) / 10.0);
 
-        return Math.max(10, derivedCP) == cp;
-    }
-    //endregion
+        double perfection = (attackIV + defenseIV + staminaIV) / 45.0;
 
-    //region - Public Methods -
+        Potential potential = new Potential();
+        potential.attackIV = attackIV;
+        potential.defenseIV = defenseIV;
+        potential.staminaIV = staminaIV;
+
+        potential.attack = (int)derivedAttack;
+        potential.defense = (int)derivedDefense;
+        potential.stamina = (int)derivedStamina;
+
+        potential.perfection = Math.round(perfection * 100);
+        potential.cp = (int)derivedCP;
+
+        return potential;
+    }
+
     public ArrayList<Potential> evaluate(int cp, int hp, int dust, boolean powered) {
         ArrayList<Potential> list = new ArrayList<>();
 
@@ -80,14 +114,8 @@ public class Pokemon {
                         boolean cpOk = cpCheck(cp, attackIV, defenseIV, staminaIV, cpScalar);
 
                         if ( hpOk == true && cpOk == true ) {
-                            double perfection = (attackIV + defenseIV + staminaIV) / 45.0;
-
-                            Potential pot = new Potential();
-                            pot.attack = attackIV;
-                            pot.defense = defenseIV;
-                            pot.stamina = staminaIV;
+                            Potential pot = getPotential(attackIV, defenseIV, staminaIV, cpScalar);
                             pot.level = level;
-                            pot.perfection = Math.floor(perfection * 100);
 
                             list.add(pot);
                         }

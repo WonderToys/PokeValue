@@ -123,19 +123,6 @@
                 android:layout_marginLeft="3dp" />
 
             <com.github.lzyzsd.circleprogress.ArcProgress
-                android:id="@+id/avgPerfection"
-                android:layout_weight="1"
-                app:arc_bottom_text="Avg"
-                app:arc_max="100"
-                app:arc_finished_color="#1565c0"
-                app:arc_unfinished_color="#251565c0"
-                app:arc_text_color="#1565c0"
-                android:layout_height="85dp"
-                android:layout_marginTop="6dp"
-                android:layout_marginRight="3dp"
-                android:layout_marginLeft="3dp" />
-
-            <com.github.lzyzsd.circleprogress.ArcProgress
                 android:id="@+id/maxPerfection"
                 android:layout_weight="1"
                 app:arc_bottom_text="Max"
@@ -143,6 +130,19 @@
                 app:arc_finished_color="#2e7d32"
                 app:arc_unfinished_color="#252e7d32"
                 app:arc_text_color="#2e7d32"
+                android:layout_height="85dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="3dp"
+                android:layout_marginLeft="3dp" />
+
+            <com.github.lzyzsd.circleprogress.ArcProgress
+                android:id="@+id/perfectPerfection"
+                android:layout_weight="1"
+                app:arc_bottom_text="100%"
+                app:arc_max="100"
+                app:arc_finished_color="#1565c0"
+                app:arc_unfinished_color="#251565c0"
+                app:arc_text_color="#1565c0"
                 android:layout_height="85dp"
                 android:layout_marginTop="6dp"
                 android:layout_marginRight="3dp"
