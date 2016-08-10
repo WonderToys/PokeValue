@@ -8,8 +8,6 @@ import android.graphics.Point;
 import android.os.IBinder;
 import android.os.Vibrator;
 import android.support.annotation.Nullable;
-import android.text.Html;
-import android.text.Spanned;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -423,8 +421,11 @@ public class CalculateOverlayService extends Service implements View.OnClickList
                 minPerfection.setProgress((int)minPotential.perfection);
                 maxPerfection.setProgress((int)maxPotential.perfection);
 
-                perfectPerfection.setProgress(100);
-                perfectPerfection.setBottomText(Integer.toString(perfectPotential.cp));
+                perfectPerfection.setMax(perfectPotential.cp);
+                perfectPerfection.setProgress(perfectPotential.cp);
+                perfectPerfection.setSuffixText("");
+
+                //perfectPerfection.setBottomText(Integer.toString(perfectPotential.cp));
 
                 Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_out);
                 Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_in);

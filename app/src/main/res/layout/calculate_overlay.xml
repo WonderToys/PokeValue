@@ -138,8 +138,10 @@
             <com.github.lzyzsd.circleprogress.ArcProgress
                 android:id="@+id/perfectPerfection"
                 android:layout_weight="1"
-                app:arc_bottom_text="100%"
+                app:arc_bottom_text="Perfect"
+                app:arc_text_size="28dp"
                 app:arc_max="100"
+                android:alpha="0.5"
                 app:arc_finished_color="#1565c0"
                 app:arc_unfinished_color="#251565c0"
                 app:arc_text_color="#1565c0"

@@ -1,14 +1,36 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/pref_general_category_title">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="enableVibrate"
+            android:title="@string/pref_enable_vibrate"
+            android:summary="@string/pref_enable_vibrate_summary" />
+    </PreferenceCategory>
 
-    <SwitchPreference
-        android:defaultValue="true"
-        android:key="enableAutoUpdate"
-        android:title="@string/pref_auto_update"
-        android:summary="@string/pref_auto_update_desc" />
+    <PreferenceCategory android:title="@string/pref_update_category_title">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="enableAutoUpdate"
+            android:title="@string/pref_auto_update"
+            android:summary="@string/pref_auto_update_summary" />
 
-    <Preference
-        android:key="checkUpdate"
-        android:title="@string/pref_check_for_updates" />
+        <Preference
+            android:key="checkUpdate"
+            android:title="@string/pref_check_for_updates" />
 
+        <Preference
+            android:key="releaseNotes"
+            android:title="@string/pref_release_notes" />
+    </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/pref_other_category_title">
+        <Preference
+            android:key="reportBug"
+            android:title="@string/pref_report_bug" />
+
+        <Preference
+            android:key="appVersion"
+            android:title="@string/pref_app_version"
+            android:enabled="false" />
+    </PreferenceCategory>
 </PreferenceScreen>

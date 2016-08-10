@@ -4,6 +4,20 @@
 
 # Release Notes
 
+### v0.5.0
+- New launcher icon, woot woot!
+- PokeValue now has settings. You can disable auto update, vibration, check for updates, and read the ReleaseNotes!
+- Removed the main "splash" activity which used to show release notes
+- Release notes can now be found under the new settings activity
+- Added settings icon to the PokeValue tray
+- Tweaked CP calculations. Should be a bit more accurate now :)
+- The position of the Tray and Calculate overlay are now persisted when you leave the app
+- Removed the "Average IV" calculation, and instead now display the "Perfect" stats for the Pokemon
+- Added CP to the "Perfection" tooltips
+- Expanded the "Perfection" tooltips to show actual Attack, Defense, and Stamina values
+- Squashed a few minor bugs
+- Minor UI enhancements
+
 ### v0.4.0
 - Some permissions have been added to accomplish the below changes
 - The Avg. Perfection circle is now clickable, which will show you the stats

@@ -8,7 +8,19 @@
         ]]>
     </string>
 
+    <string name="pref_general_category_title">General</string>
+    <string name="pref_update_category_title">Updates</string>
+    <string name="pref_other_category_title">Other</string>
+
+
+    <string name="pref_enable_vibrate">Vibrate</string>
+    <string name="pref_enable_vibrate_summary">Enable haptic feedback when interacting with PokeValue</string>
+
     <string name="pref_auto_update">Auto Update</string>
-    <string name="pref_auto_update_desc">Enable automatic updates of PokeValue</string>
+    <string name="pref_auto_update_summary">Enable automatic updates of PokeValue</string>
     <string name="pref_check_for_updates">Check For Updates</string>
+    <string name="pref_release_notes">View Release Notes</string>
+
+    <string name="pref_report_bug">Report an Issue</string>
+    <string name="pref_app_version">PokeValue Version</string>
 </resources>
