@@ -9,20 +9,13 @@ import android.graphics.PixelFormat;
 import android.graphics.Point;
 import android.os.IBinder;
 import android.os.Vibrator;
-import android.text.Layout;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.ScaleAnimation;
-import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import com.wondertoys.pokevalue.utils.Preferences;
 
@@ -199,7 +192,7 @@ public class ToggleOverlayService extends Service implements View.OnTouchListene
     public void onClick(View v) {
         Vibrator vibrator = (Vibrator)getSystemService(Context.VIBRATOR_SERVICE);
 
-        if ( vibrator.hasVibrator() ) {
+        if ( vibrator.hasVibrator() && Preferences.getEnableVibrator(this) ) {
             vibrator.vibrate(20);
         }
 

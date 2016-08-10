@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.preference.PreferenceManager;
 
+import com.wondertoys.pokevalue.MainActivity;
+
 public class Preferences {
     //region - Constants -
     private static final String KEY_TOGGLE_OVERLAY_X = "toggleOverlayX";
@@ -48,6 +50,18 @@ public class Preferences {
         int y = sharedPreferences.getInt(KEY_CALCULATE_OVERLAY_Y, DEFAULT_CALCULATE_OVERLAY_Y);
 
         return new Point(x, y);
+    }
+
+    public static boolean getEnableAutoUpdate(Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+
+        return sharedPreferences.getBoolean("enableAutoUpdate", true);
+    }
+
+    public static boolean getEnableVibrator(Context context) {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
+
+        return sharedPreferences.getBoolean("enableVibrate", true);
     }
     //endregion
 }

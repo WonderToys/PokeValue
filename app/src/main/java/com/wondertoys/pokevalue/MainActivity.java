@@ -50,8 +50,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        PreferenceManager.setDefaultValues(this, R.xml.pref_general, false);
-        autoUpdateApk = new AutoUpdateApk(getApplicationContext());
+        PreferenceManager.setDefaultValues(getApplicationContext(), R.xml.pref_general, false);
+
+        if ( Preferences.getEnableAutoUpdate(this) ) {
+            autoUpdateApk = new AutoUpdateApk(getApplicationContext());
+        }
 
         if (Build.VERSION.SDK_INT >= 23 ) {
             if ( !Settings.canDrawOverlays(this) ) {

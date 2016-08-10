@@ -85,8 +85,8 @@ public class Pokemon {
         potential.staminaIV = staminaIV;
 
         potential.attack = (int)derivedAttack;
-        potential.defense = (int)derivedDefense;
-        potential.stamina = (int)derivedStamina;
+        potential.defense = defense + defenseIV;
+        potential.stamina = stamina + staminaIV;
 
         potential.perfection = Math.round(perfection * 100);
         potential.cp = (int)derivedCP;
