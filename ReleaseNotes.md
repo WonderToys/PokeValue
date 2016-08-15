@@ -4,6 +4,9 @@
 
 # Release Notes
 
+### v0.5.1
+- Fix for CP Scalars in the IV equation. Should not be hugely noticeable for most IVs.
+
 ### v0.5.0
 - New launcher icon, woot woot!
 - PokeValue now has settings. You can disable auto update, vibration, check for updates, and read the ReleaseNotes!
