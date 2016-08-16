@@ -4,8 +4,13 @@
 
 # Release Notes
 
+### v0.6.0
+- Removed display of CP from tooltips when tapping a potential perfection. It wasn't helpful, IMO
+- Added "More" button to results screen to view possible levels, stats, and the potential moves of the Pokemon
+- The moves with the highest DPS are highlighted in a light green
+
 ### v0.5.1
-- Fix for CP Scalars in the IV equation. Should not be hugely noticeable for most IVs.
+- Fix for CP Scalars in the IV equation. Should not be hugely noticeable for most IVs
 
 ### v0.5.0
 - New launcher icon, woot woot!

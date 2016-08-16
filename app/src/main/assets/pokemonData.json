@@ -1,0 +1,6078 @@
+[
+  {
+    "id": 1,
+    "name": "Bulbasaur",
+    "baseAttack": 126,
+    "baseDefense": 126,
+    "baseStamina": 90,
+    "fastMoves": [
+      {
+        "name": "Vine Whip",
+        "power": 7,
+        "energy": 7,
+        "dps": 13.46
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Power Whip",
+        "power": 70,
+        "energy": -100,
+        "dps": 31.25
+      },
+      {
+        "name": "Seed Bomb",
+        "power": 40,
+        "energy": -33,
+        "dps": 20.83
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Ivysaur",
+    "baseAttack": 156,
+    "baseDefense": 158,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Vine Whip",
+        "power": 7,
+        "energy": 7,
+        "dps": 13.46
+      },
+      {
+        "name": "Razor Leaf",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.93
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Power Whip",
+        "power": 70,
+        "energy": -100,
+        "dps": 31.25
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      },
+      {
+        "name": "Solar Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30.61
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Venusaur",
+    "baseAttack": 198,
+    "baseDefense": 200,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Vine Whip",
+        "power": 7,
+        "energy": 7,
+        "dps": 13.46
+      },
+      {
+        "name": "Razor Leaf",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.93
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Petal Blizzard",
+        "power": 65,
+        "energy": -50,
+        "dps": 25.39
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      },
+      {
+        "name": "Solar Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30.61
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Charmander",
+    "baseAttack": 128,
+    "baseDefense": 108,
+    "baseStamina": 78,
+    "fastMoves": [
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Flame Burst",
+        "power": 30,
+        "energy": -25,
+        "dps": 17.86
+      },
+      {
+        "name": "Flame",
+        "power": 20,
+        "energy": -20,
+        "dps": 8.06
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Charmeleon",
+    "baseAttack": 160,
+    "baseDefense": 140,
+    "baseStamina": 116,
+    "fastMoves": [
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Fire Punch",
+        "power": 40,
+        "energy": -33,
+        "dps": 17.86
+      },
+      {
+        "name": "Flame Burst",
+        "power": 30,
+        "energy": -25,
+        "dps": 17.86
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Charizard",
+    "baseAttack": 212,
+    "baseDefense": 182,
+    "baseStamina": 156,
+    "fastMoves": [
+      {
+        "name": "Wing Attack",
+        "power": 9,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dragon Claw",
+        "power": 35,
+        "energy": -50,
+        "dps": 23.33
+      },
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 30.49
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Squirtle",
+    "baseAttack": 112,
+    "baseDefense": 142,
+    "baseStamina": 88,
+    "fastMoves": [
+      {
+        "name": "Bubble",
+        "power": 25,
+        "energy": 15,
+        "dps": 13.59
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Jet",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.3
+      },
+      {
+        "name": "Aqua Tail",
+        "power": 45,
+        "energy": -50,
+        "dps": 23.94
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Wartortle",
+    "baseAttack": 144,
+    "baseDefense": 176,
+    "baseStamina": 118,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Jet",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.3
+      },
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Ice Beam",
+        "power": 65,
+        "energy": -50,
+        "dps": 17.81
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Blastoise",
+    "baseAttack": 186,
+    "baseDefense": 222,
+    "baseStamina": 158,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Flash Cannon",
+        "power": 60,
+        "energy": -33,
+        "dps": 15.38
+      },
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Ice Beam",
+        "power": 65,
+        "energy": -50,
+        "dps": 17.81
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Caterpie",
+    "baseAttack": 62,
+    "baseDefense": 66,
+    "baseStamina": 90,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Struggle",
+        "power": 15,
+        "energy": -20,
+        "dps": 8.85
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Metapod",
+    "baseAttack": 56,
+    "baseDefense": 86,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Struggle",
+        "power": 15,
+        "energy": -20,
+        "dps": 8.85
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Butterfree",
+    "baseAttack": 144,
+    "baseDefense": 144,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 9.93
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bug Buzz",
+        "power": 75,
+        "energy": -50,
+        "dps": 22.06
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 19.64
+      },
+      {
+        "name": "Signal Beam",
+        "power": 45,
+        "energy": -33,
+        "dps": 18.15
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Weedle",
+    "baseAttack": 68,
+    "baseDefense": 64,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Poison Sting",
+        "power": 6,
+        "energy": 4,
+        "dps": 13.04
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Struggle",
+        "power": 15,
+        "energy": -20,
+        "dps": 8.85
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Kakuna",
+    "baseAttack": 62,
+    "baseDefense": 82,
+    "baseStamina": 90,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Poison Sting",
+        "power": 6,
+        "energy": 4,
+        "dps": 13.04
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Struggle",
+        "power": 15,
+        "energy": -20,
+        "dps": 8.85
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Beedrill",
+    "baseAttack": 144,
+    "baseDefense": 130,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Poison Jab",
+        "power": 15,
+        "energy": 7,
+        "dps": 17.86
+      },
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 10.34
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      },
+      {
+        "name": "X Scissor",
+        "power": 35,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Pidgey",
+    "baseAttack": 94,
+    "baseDefense": 90,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 9.4
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Air Cutter",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Twister",
+        "power": 25,
+        "energy": -20,
+        "dps": 9.26
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Pidgeotto",
+    "baseAttack": 126,
+    "baseDefense": 122,
+    "baseStamina": 126,
+    "fastMoves": [
+      {
+        "name": "Wing Attack",
+        "power": 9,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Steel Wing",
+        "power": 15,
+        "energy": 4,
+        "dps": 11.28
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Air Cutter",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Twister",
+        "power": 25,
+        "energy": -20,
+        "dps": 9.26
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Pidgeot",
+    "baseAttack": 170,
+    "baseDefense": 166,
+    "baseStamina": 166,
+    "fastMoves": [
+      {
+        "name": "Wing Attack",
+        "power": 9,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Steel Wing",
+        "power": 15,
+        "energy": 4,
+        "dps": 11.28
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Air Cutter",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Hurricane",
+        "power": 80,
+        "energy": -100,
+        "dps": 31.25
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Rattata",
+    "baseAttack": 92,
+    "baseDefense": 86,
+    "baseStamina": 60,
+    "fastMoves": [
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 9.4
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 32.05
+      },
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 12.07
+      },
+      {
+        "name": "Hyper Fang",
+        "power": 35,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Raticate",
+    "baseAttack": 146,
+    "baseDefense": 150,
+    "baseStamina": 110,
+    "fastMoves": [
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 9.4
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 12.07
+      },
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30
+      },
+      {
+        "name": "Hyper Fang",
+        "power": 35,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Spearow",
+    "baseAttack": 102,
+    "baseDefense": 78,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Peck",
+        "power": 10,
+        "energy": 10,
+        "dps": 10.87
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 9.4
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Drill Peck",
+        "power": 40,
+        "energy": -33,
+        "dps": 18.52
+      },
+      {
+        "name": "Twister",
+        "power": 25,
+        "energy": -20,
+        "dps": 9.26
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Fearow",
+    "baseAttack": 168,
+    "baseDefense": 146,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Steel Wing",
+        "power": 15,
+        "energy": 4,
+        "dps": 11.28
+      },
+      {
+        "name": "Peck",
+        "power": 10,
+        "energy": 10,
+        "dps": 10.87
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Drill Run",
+        "power": 50,
+        "energy": -33,
+        "dps": 14.71
+      },
+      {
+        "name": "Twister",
+        "power": 25,
+        "energy": -20,
+        "dps": 9.26
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Ekans",
+    "baseAttack": 112,
+    "baseDefense": 112,
+    "baseStamina": 70,
+    "fastMoves": [
+      {
+        "name": "Poison Sting",
+        "power": 6,
+        "energy": 4,
+        "dps": 13.04
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Gunk Shot",
+        "power": 65,
+        "energy": -100,
+        "dps": 27.08
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      },
+      {
+        "name": "Wrap",
+        "power": 25,
+        "energy": -20,
+        "dps": 6.25
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Arbok",
+    "baseAttack": 166,
+    "baseDefense": 166,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dark Pulse",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Gunk Shot",
+        "power": 65,
+        "energy": -100,
+        "dps": 27.08
+      },
+      {
+        "name": "Sludge Wave",
+        "power": 70,
+        "energy": -100,
+        "dps": 25.74
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Pikachu",
+    "baseAttack": 124,
+    "baseDefense": 108,
+    "baseStamina": 70,
+    "fastMoves": [
+      {
+        "name": "Thunder Shock",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 7.52
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Discharge",
+        "power": 35,
+        "energy": -33,
+        "dps": 17.5
+      },
+      {
+        "name": "Thunder",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.07
+      },
+      {
+        "name": "Thunderbolt",
+        "power": 55,
+        "energy": -50,
+        "dps": 25.46
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Raichu",
+    "baseAttack": 200,
+    "baseDefense": 154,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Spark",
+        "power": 7,
+        "energy": 4,
+        "dps": 12.5
+      },
+      {
+        "name": "Thunder Shock",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Brick Break",
+        "power": 30,
+        "energy": -33,
+        "dps": 18.75
+      },
+      {
+        "name": "Thunder",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.07
+      },
+      {
+        "name": "Thunder Punch",
+        "power": 40,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Sandshrew",
+    "baseAttack": 90,
+    "baseDefense": 114,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 15.09
+      },
+      {
+        "name": "Rock Slide",
+        "power": 50,
+        "energy": -33,
+        "dps": 15.63
+      },
+      {
+        "name": "Rock Tomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 8.82
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Sandslash",
+    "baseAttack": 150,
+    "baseDefense": 172,
+    "baseStamina": 150,
+    "fastMoves": [
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Metal Claw",
+        "power": 8,
+        "energy": 7,
+        "dps": 12.7
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bulldoze",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.87
+      },
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.76
+      },
+      {
+        "name": "Rock Tomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 8.82
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Nidoran Female",
+    "baseAttack": 100,
+    "baseDefense": 104,
+    "baseStamina": 110,
+    "fastMoves": [
+      {
+        "name": "Poison Sting",
+        "power": 6,
+        "energy": 4,
+        "dps": 13.04
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 25.64
+      },
+      {
+        "name": "Poison Fang",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.02
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Nidorina",
+    "baseAttack": 132,
+    "baseDefense": 136,
+    "baseStamina": 140,
+    "fastMoves": [
+      {
+        "name": "Poison Sting",
+        "power": 6,
+        "energy": 4,
+        "dps": 13.04
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 12.07
+      },
+      {
+        "name": "Poison Fang",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.02
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Nidoqueen",
+    "baseAttack": 184,
+    "baseDefense": 190,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Poison Jab",
+        "power": 15,
+        "energy": 7,
+        "dps": 17.86
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.76
+      },
+      {
+        "name": "Sludge Wave",
+        "power": 70,
+        "energy": -100,
+        "dps": 25.74
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 25.81
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Nidoran Male",
+    "baseAttack": 110,
+    "baseDefense": 94,
+    "baseStamina": 92,
+    "fastMoves": [
+      {
+        "name": "Poison Sting",
+        "power": 6,
+        "energy": 4,
+        "dps": 13.04
+      },
+      {
+        "name": "Peck",
+        "power": 10,
+        "energy": 10,
+        "dps": 8.7
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 25.64
+      },
+      {
+        "name": "Horn Attack",
+        "power": 25,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Nidorino",
+    "baseAttack": 142,
+    "baseDefense": 128,
+    "baseStamina": 122,
+    "fastMoves": [
+      {
+        "name": "Poison Jab",
+        "power": 15,
+        "energy": 7,
+        "dps": 17.86
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 12.07
+      },
+      {
+        "name": "Horn Attack",
+        "power": 25,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Nidoking",
+    "baseAttack": 204,
+    "baseDefense": 170,
+    "baseStamina": 162,
+    "fastMoves": [
+      {
+        "name": "Poison Jab",
+        "power": 15,
+        "energy": 7,
+        "dps": 17.86
+      },
+      {
+        "name": "Fury Cutter",
+        "power": 3,
+        "energy": 12,
+        "dps": 7.5
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.76
+      },
+      {
+        "name": "Megahorn",
+        "power": 80,
+        "energy": -100,
+        "dps": 25
+      },
+      {
+        "name": "Sludge Wave",
+        "power": 70,
+        "energy": -100,
+        "dps": 25.74
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Clefairy",
+    "baseAttack": 116,
+    "baseDefense": 124,
+    "baseStamina": 140,
+    "fastMoves": [
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 12.96
+      },
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 11.43
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 25.64
+      },
+      {
+        "name": "Disarming Voice",
+        "power": 25,
+        "energy": -20,
+        "dps": 8.01
+      },
+      {
+        "name": "Moonblast",
+        "power": 85,
+        "energy": -100,
+        "dps": 25.91
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Clefable",
+    "baseAttack": 178,
+    "baseDefense": 178,
+    "baseStamina": 190,
+    "fastMoves": [
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 12.96
+      },
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 11.43
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dazzling Gleam",
+        "power": 55,
+        "energy": -33,
+        "dps": 16.37
+      },
+      {
+        "name": "Moonblast",
+        "power": 85,
+        "energy": -100,
+        "dps": 25.91
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 19.64
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Vulpix",
+    "baseAttack": 106,
+    "baseDefense": 118,
+    "baseStamina": 76,
+    "fastMoves": [
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 7.52
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 25.64
+      },
+      {
+        "name": "Flame",
+        "power": 20,
+        "energy": -20,
+        "dps": 8.06
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Ninetales",
+    "baseAttack": 176,
+    "baseDefense": 194,
+    "baseStamina": 146,
+    "fastMoves": [
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      },
+      {
+        "name": "Feint Attack",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.54
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 30.49
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      },
+      {
+        "name": "Heat Wave",
+        "power": 80,
+        "energy": -100,
+        "dps": 26.32
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Jigglypuff",
+    "baseAttack": 98,
+    "baseDefense": 54,
+    "baseStamina": 230,
+    "fastMoves": [
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 16.2
+      },
+      {
+        "name": "Feint Attack",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.54
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 32.05
+      },
+      {
+        "name": "Disarming Voice",
+        "power": 25,
+        "energy": -20,
+        "dps": 8.01
+      },
+      {
+        "name": "Play Rough",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Wigglytuff",
+    "baseAttack": 168,
+    "baseDefense": 108,
+    "baseStamina": 280,
+    "fastMoves": [
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 16.2
+      },
+      {
+        "name": "Feint Attack",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.54
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dazzling Gleam",
+        "power": 55,
+        "energy": -33,
+        "dps": 16.37
+      },
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30
+      },
+      {
+        "name": "Play Rough",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Zubat",
+    "baseAttack": 88,
+    "baseDefense": 90,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 7.52
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Air Cutter",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Poison Fang",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.02
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Golbat",
+    "baseAttack": 164,
+    "baseDefense": 164,
+    "baseStamina": 150,
+    "fastMoves": [
+      {
+        "name": "Wing Attack",
+        "power": 9,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Air Cutter",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Ominous Wind",
+        "power": 30,
+        "energy": -25,
+        "dps": 9.68
+      },
+      {
+        "name": "Poison Fang",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.02
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Oddish",
+    "baseAttack": 134,
+    "baseDefense": 130,
+    "baseStamina": 90,
+    "fastMoves": [
+      {
+        "name": "Razor Leaf",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.93
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Moonblast",
+        "power": 85,
+        "energy": -100,
+        "dps": 20.73
+      },
+      {
+        "name": "Seed Bomb",
+        "power": 40,
+        "energy": -33,
+        "dps": 20.83
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Gloom",
+    "baseAttack": 162,
+    "baseDefense": 158,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Razor Leaf",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.93
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Moonblast",
+        "power": 85,
+        "energy": -100,
+        "dps": 20.73
+      },
+      {
+        "name": "Petal Blizzard",
+        "power": 65,
+        "energy": -50,
+        "dps": 25.39
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Vileplume",
+    "baseAttack": 202,
+    "baseDefense": 190,
+    "baseStamina": 150,
+    "fastMoves": [
+      {
+        "name": "Razor Leaf",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.93
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Moonblast",
+        "power": 85,
+        "energy": -100,
+        "dps": 20.73
+      },
+      {
+        "name": "Petal Blizzard",
+        "power": 65,
+        "energy": -50,
+        "dps": 25.39
+      },
+      {
+        "name": "Solar Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30.61
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Paras",
+    "baseAttack": 122,
+    "baseDefense": 120,
+    "baseStamina": 70,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Cross Poison",
+        "power": 25,
+        "energy": -25,
+        "dps": 16.67
+      },
+      {
+        "name": "Seed Bomb",
+        "power": 40,
+        "energy": -33,
+        "dps": 20.83
+      },
+      {
+        "name": "X Scissor",
+        "power": 35,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Parasect",
+    "baseAttack": 162,
+    "baseDefense": 170,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Fury Cutter",
+        "power": 3,
+        "energy": 12,
+        "dps": 9.38
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Cross Poison",
+        "power": 25,
+        "energy": -25,
+        "dps": 16.67
+      },
+      {
+        "name": "Solar Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30.61
+      },
+      {
+        "name": "X Scissor",
+        "power": 35,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Venonat",
+    "baseAttack": 108,
+    "baseDefense": 118,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 9.93
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Poison Fang",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.02
+      },
+      {
+        "name": "Psybeam",
+        "power": 40,
+        "energy": -25,
+        "dps": 10.53
+      },
+      {
+        "name": "Signal Beam",
+        "power": 45,
+        "energy": -33,
+        "dps": 18.15
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Venomoth",
+    "baseAttack": 172,
+    "baseDefense": 154,
+    "baseStamina": 140,
+    "fastMoves": [
+      {
+        "name": "Bug Bite",
+        "power": 5,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 9.93
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bug Buzz",
+        "power": 75,
+        "energy": -50,
+        "dps": 22.06
+      },
+      {
+        "name": "Poison Fang",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.02
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 19.64
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Diglett",
+    "baseAttack": 108,
+    "baseDefense": 86,
+    "baseStamina": 20,
+    "fastMoves": [
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 15.09
+      },
+      {
+        "name": "Mud Bomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 14.42
+      },
+      {
+        "name": "Rock Tomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 8.82
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Dugtrio",
+    "baseAttack": 148,
+    "baseDefense": 140,
+    "baseStamina": 70,
+    "fastMoves": [
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Sucker Punch",
+        "power": 7,
+        "energy": 4,
+        "dps": 10
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.76
+      },
+      {
+        "name": "Mud Bomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 14.42
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 25.81
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Meowth",
+    "baseAttack": 104,
+    "baseDefense": 94,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 32.05
+      },
+      {
+        "name": "Dark Pulse",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Night Slash",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.11
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Persian",
+    "baseAttack": 156,
+    "baseDefense": 146,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Feint Attack",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.54
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Night Slash",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.11
+      },
+      {
+        "name": "Play Rough",
+        "power": 55,
+        "energy": -50,
+        "dps": 18.97
+      },
+      {
+        "name": "Power Gem",
+        "power": 40,
+        "energy": -33,
+        "dps": 13.79
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Psyduck",
+    "baseAttack": 132,
+    "baseDefense": 112,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 11.43
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Tail",
+        "power": 45,
+        "energy": -50,
+        "dps": 23.94
+      },
+      {
+        "name": "Cross Chop",
+        "power": 60,
+        "energy": -100,
+        "dps": 30
+      },
+      {
+        "name": "Psybeam",
+        "power": 40,
+        "energy": -25,
+        "dps": 10.53
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Golduck",
+    "baseAttack": 194,
+    "baseDefense": 176,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 9.93
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Ice Beam",
+        "power": 65,
+        "energy": -50,
+        "dps": 17.81
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 19.64
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Mankey",
+    "baseAttack": 122,
+    "baseDefense": 96,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Karate Chop",
+        "power": 6,
+        "energy": 7,
+        "dps": 9.38
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Brick Break",
+        "power": 30,
+        "energy": -33,
+        "dps": 23.44
+      },
+      {
+        "name": "Cross Chop",
+        "power": 60,
+        "energy": -100,
+        "dps": 37.5
+      },
+      {
+        "name": "Low Sweep",
+        "power": 30,
+        "energy": -25,
+        "dps": 16.67
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Primeape",
+    "baseAttack": 178,
+    "baseDefense": 150,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Low Kick",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      },
+      {
+        "name": "Karate Chop",
+        "power": 6,
+        "energy": 7,
+        "dps": 9.38
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Cross Chop",
+        "power": 60,
+        "energy": -100,
+        "dps": 37.5
+      },
+      {
+        "name": "Low Sweep",
+        "power": 30,
+        "energy": -25,
+        "dps": 16.67
+      },
+      {
+        "name": "Night Slash",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.11
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "Growlithe",
+    "baseAttack": 156,
+    "baseDefense": 110,
+    "baseStamina": 110,
+    "fastMoves": [
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 25.64
+      },
+      {
+        "name": "Flame Wheel",
+        "power": 40,
+        "energy": -25,
+        "dps": 10.87
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Arcanine",
+    "baseAttack": 230,
+    "baseDefense": 180,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Fire Fang",
+        "power": 10,
+        "energy": 4,
+        "dps": 14.88
+      },
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bulldoze",
+        "power": 35,
+        "energy": -25,
+        "dps": 10.29
+      },
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 30.49
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Poliwag",
+    "baseAttack": 108,
+    "baseDefense": 98,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Bubble",
+        "power": 25,
+        "energy": 15,
+        "dps": 13.59
+      },
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 25.64
+      },
+      {
+        "name": "Bubble Beam",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Mud Bomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.54
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Poliwhirl",
+    "baseAttack": 132,
+    "baseDefense": 132,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Bubble",
+        "power": 25,
+        "energy": 15,
+        "dps": 13.59
+      },
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bubble Beam",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Mud Bomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.54
+      },
+      {
+        "name": "Scald",
+        "power": 55,
+        "energy": -33,
+        "dps": 17.19
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Poliwrath",
+    "baseAttack": 180,
+    "baseDefense": 202,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Bubble",
+        "power": 25,
+        "energy": 15,
+        "dps": 13.59
+      },
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Ice Punch",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Submission",
+        "power": 30,
+        "energy": -33,
+        "dps": 17.86
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Abra",
+    "baseAttack": 110,
+    "baseDefense": 76,
+    "baseStamina": 50,
+    "fastMoves": [
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 14.29
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Psyshock",
+        "power": 40,
+        "energy": -33,
+        "dps": 18.52
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.61
+      },
+      {
+        "name": "Signal Beam",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.52
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Kadabra",
+    "baseAttack": 150,
+    "baseDefense": 112,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Psycho Cut",
+        "power": 7,
+        "energy": 7,
+        "dps": 15.35
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dazzling Gleam",
+        "power": 55,
+        "energy": -33,
+        "dps": 13.1
+      },
+      {
+        "name": "Psybeam",
+        "power": 40,
+        "energy": -25,
+        "dps": 13.16
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.61
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Alakazam",
+    "baseAttack": 186,
+    "baseDefense": 152,
+    "baseStamina": 110,
+    "fastMoves": [
+      {
+        "name": "Psycho Cut",
+        "power": 7,
+        "energy": 7,
+        "dps": 15.35
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dazzling Gleam",
+        "power": 55,
+        "energy": -33,
+        "dps": 13.1
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.61
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Machop",
+    "baseAttack": 118,
+    "baseDefense": 96,
+    "baseStamina": 140,
+    "fastMoves": [
+      {
+        "name": "Low Kick",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      },
+      {
+        "name": "Karate Chop",
+        "power": 6,
+        "energy": 7,
+        "dps": 9.38
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Brick Break",
+        "power": 30,
+        "energy": -33,
+        "dps": 23.44
+      },
+      {
+        "name": "Cross Chop",
+        "power": 60,
+        "energy": -100,
+        "dps": 37.5
+      },
+      {
+        "name": "Low Sweep",
+        "power": 30,
+        "energy": -25,
+        "dps": 16.67
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Machoke",
+    "baseAttack": 154,
+    "baseDefense": 144,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Low Kick",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      },
+      {
+        "name": "Karate Chop",
+        "power": 6,
+        "energy": 7,
+        "dps": 9.38
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Brick Break",
+        "power": 30,
+        "energy": -33,
+        "dps": 23.44
+      },
+      {
+        "name": "Cross Chop",
+        "power": 60,
+        "energy": -100,
+        "dps": 37.5
+      },
+      {
+        "name": "Submission",
+        "power": 30,
+        "energy": -33,
+        "dps": 17.86
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Machamp",
+    "baseAttack": 198,
+    "baseDefense": 180,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Karate Chop",
+        "power": 6,
+        "energy": 7,
+        "dps": 9.38
+      },
+      {
+        "name": "Bullet Punch",
+        "power": 10,
+        "energy": 7,
+        "dps": 8.33
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Cross Chop",
+        "power": 60,
+        "energy": -100,
+        "dps": 37.5
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 25.81
+      },
+      {
+        "name": "Submission",
+        "power": 30,
+        "energy": -33,
+        "dps": 17.86
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Bellsprout",
+    "baseAttack": 158,
+    "baseDefense": 78,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Vine Whip",
+        "power": 7,
+        "energy": 7,
+        "dps": 13.46
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Power Whip",
+        "power": 70,
+        "energy": -100,
+        "dps": 31.25
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      },
+      {
+        "name": "Wrap",
+        "power": 25,
+        "energy": -20,
+        "dps": 6.25
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Weepinbell",
+    "baseAttack": 190,
+    "baseDefense": 110,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Razor Leaf",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.93
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Power Whip",
+        "power": 70,
+        "energy": -100,
+        "dps": 31.25
+      },
+      {
+        "name": "Seed Bomb",
+        "power": 40,
+        "energy": -33,
+        "dps": 20.83
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Victreebel",
+    "baseAttack": 222,
+    "baseDefense": 152,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Razor Leaf",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.93
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Leaf Blade",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      },
+      {
+        "name": "Solar Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30.61
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Tentacool",
+    "baseAttack": 106,
+    "baseDefense": 136,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Bubble",
+        "power": 25,
+        "energy": 15,
+        "dps": 13.59
+      },
+      {
+        "name": "Poison Sting",
+        "power": 6,
+        "energy": 4,
+        "dps": 13.04
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bubble Beam",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      },
+      {
+        "name": "Wrap",
+        "power": 25,
+        "energy": -20,
+        "dps": 6.25
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Tentacruel",
+    "baseAttack": 170,
+    "baseDefense": 196,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Poison Jab",
+        "power": 15,
+        "energy": 7,
+        "dps": 17.86
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Blizzard",
+        "power": 100,
+        "energy": -100,
+        "dps": 25.64
+      },
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Sludge Wave",
+        "power": 70,
+        "energy": -100,
+        "dps": 25.74
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Geodude",
+    "baseAttack": 106,
+    "baseDefense": 118,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Rock Throw",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.03
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 15.09
+      },
+      {
+        "name": "Rock Slide",
+        "power": 50,
+        "energy": -33,
+        "dps": 19.53
+      },
+      {
+        "name": "Rock Tomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.03
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Graveler",
+    "baseAttack": 142,
+    "baseDefense": 156,
+    "baseStamina": 110,
+    "fastMoves": [
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Rock Throw",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.03
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 15.09
+      },
+      {
+        "name": "Rock Slide",
+        "power": 50,
+        "energy": -33,
+        "dps": 19.53
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 32.26
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Golem",
+    "baseAttack": 176,
+    "baseDefense": 198,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Rock Throw",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.03
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Ancient Power",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.15
+      },
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.76
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 32.26
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Ponyta",
+    "baseAttack": 168,
+    "baseDefense": 138,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 30.49
+      },
+      {
+        "name": "Flame",
+        "power": 20,
+        "energy": -20,
+        "dps": 8.06
+      },
+      {
+        "name": "Flame Wheel",
+        "power": 40,
+        "energy": -25,
+        "dps": 10.87
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Rapidash",
+    "baseAttack": 200,
+    "baseDefense": 170,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      },
+      {
+        "name": "Low Kick",
+        "power": 5,
+        "energy": 7,
+        "dps": 8.33
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Drill Run",
+        "power": 50,
+        "energy": -33,
+        "dps": 14.71
+      },
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 30.49
+      },
+      {
+        "name": "Heat Wave",
+        "power": 80,
+        "energy": -100,
+        "dps": 26.32
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Slowpoke",
+    "baseAttack": 110,
+    "baseDefense": 110,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Psyshock",
+        "power": 40,
+        "energy": -33,
+        "dps": 18.52
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Slowbro",
+    "baseAttack": 184,
+    "baseDefense": 198,
+    "baseStamina": 190,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Ice Beam",
+        "power": 65,
+        "energy": -50,
+        "dps": 17.81
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Magnemite",
+    "baseAttack": 128,
+    "baseDefense": 138,
+    "baseStamina": 50,
+    "fastMoves": [
+      {
+        "name": "Spark",
+        "power": 7,
+        "energy": 4,
+        "dps": 12.5
+      },
+      {
+        "name": "Thunder Shock",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Discharge",
+        "power": 35,
+        "energy": -33,
+        "dps": 17.5
+      },
+      {
+        "name": "Magnet Bomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 13.39
+      },
+      {
+        "name": "Thunderbolt",
+        "power": 55,
+        "energy": -50,
+        "dps": 25.46
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Magneton",
+    "baseAttack": 186,
+    "baseDefense": 180,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Spark",
+        "power": 7,
+        "energy": 4,
+        "dps": 12.5
+      },
+      {
+        "name": "Thunder Shock",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Discharge",
+        "power": 35,
+        "energy": -33,
+        "dps": 17.5
+      },
+      {
+        "name": "Flash Cannon",
+        "power": 60,
+        "energy": -33,
+        "dps": 19.23
+      },
+      {
+        "name": "Magnet Bomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 13.39
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Farfetchd",
+    "baseAttack": 138,
+    "baseDefense": 132,
+    "baseStamina": 104,
+    "fastMoves": [
+      {
+        "name": "Cut",
+        "power": 12,
+        "energy": 7,
+        "dps": 13.27
+      },
+      {
+        "name": "Fury Cutter",
+        "power": 3,
+        "energy": 12,
+        "dps": 7.5
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Air Cutter",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Leaf Blade",
+        "power": 55,
+        "energy": -50,
+        "dps": 19.64
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Doduo",
+    "baseAttack": 126,
+    "baseDefense": 96,
+    "baseStamina": 70,
+    "fastMoves": [
+      {
+        "name": "Peck",
+        "power": 10,
+        "energy": 10,
+        "dps": 10.87
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 9.4
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Drill Peck",
+        "power": 40,
+        "energy": -33,
+        "dps": 18.52
+      },
+      {
+        "name": "Swift",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.5
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Dodrio",
+    "baseAttack": 182,
+    "baseDefense": 150,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Feint Attack",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.54
+      },
+      {
+        "name": "Steel Wing",
+        "power": 15,
+        "energy": 4,
+        "dps": 11.28
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aerial Ace",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Air Cutter",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Drill Peck",
+        "power": 40,
+        "energy": -33,
+        "dps": 18.52
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Seel",
+    "baseAttack": 104,
+    "baseDefense": 138,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Ice Shard",
+        "power": 15,
+        "energy": 7,
+        "dps": 10.71
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Jet",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.3
+      },
+      {
+        "name": "Aqua Tail",
+        "power": 45,
+        "energy": -50,
+        "dps": 23.94
+      },
+      {
+        "name": "Icy Wind",
+        "power": 25,
+        "energy": -20,
+        "dps": 6.58
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Dewgong",
+    "baseAttack": 156,
+    "baseDefense": 192,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Frost Breath",
+        "power": 9,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Ice Shard",
+        "power": 15,
+        "energy": 7,
+        "dps": 13.39
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Jet",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.3
+      },
+      {
+        "name": "Blizzard",
+        "power": 100,
+        "energy": -100,
+        "dps": 32.05
+      },
+      {
+        "name": "Icy Wind",
+        "power": 25,
+        "energy": -20,
+        "dps": 8.22
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Grimer",
+    "baseAttack": 124,
+    "baseDefense": 110,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      },
+      {
+        "name": "Mud Slap",
+        "power": 15,
+        "energy": 9,
+        "dps": 11.11
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Mud Bomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.54
+      },
+      {
+        "name": "Sludge",
+        "power": 30,
+        "energy": -25,
+        "dps": 14.42
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Muk",
+    "baseAttack": 180,
+    "baseDefense": 188,
+    "baseStamina": 210,
+    "fastMoves": [
+      {
+        "name": "Poison Jab",
+        "power": 15,
+        "energy": 7,
+        "dps": 17.86
+      },
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dark Pulse",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      },
+      {
+        "name": "Sludge Wave",
+        "power": 70,
+        "energy": -100,
+        "dps": 25.74
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Shellder",
+    "baseAttack": 120,
+    "baseDefense": 112,
+    "baseStamina": 60,
+    "fastMoves": [
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      },
+      {
+        "name": "Ice Shard",
+        "power": 15,
+        "energy": 7,
+        "dps": 10.71
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bubble Beam",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Icy Wind",
+        "power": 25,
+        "energy": -20,
+        "dps": 6.58
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Cloyster",
+    "baseAttack": 196,
+    "baseDefense": 196,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Frost Breath",
+        "power": 9,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Ice Shard",
+        "power": 15,
+        "energy": 7,
+        "dps": 13.39
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Blizzard",
+        "power": 100,
+        "energy": -100,
+        "dps": 32.05
+      },
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Icy Wind",
+        "power": 25,
+        "energy": -20,
+        "dps": 8.22
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Gastly",
+    "baseAttack": 136,
+    "baseDefense": 82,
+    "baseStamina": 60,
+    "fastMoves": [
+      {
+        "name": "Lick",
+        "power": 5,
+        "energy": 7,
+        "dps": 12.5
+      },
+      {
+        "name": "Sucker Punch",
+        "power": 7,
+        "energy": 4,
+        "dps": 10
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dark Pulse",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Ominous Wind",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.1
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Haunter",
+    "baseAttack": 172,
+    "baseDefense": 118,
+    "baseStamina": 90,
+    "fastMoves": [
+      {
+        "name": "Shadow Claw",
+        "power": 11,
+        "energy": 7,
+        "dps": 14.47
+      },
+      {
+        "name": "Lick",
+        "power": 5,
+        "energy": 7,
+        "dps": 12.5
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dark Pulse",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 18.26
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Gengar",
+    "baseAttack": 204,
+    "baseDefense": 156,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Shadow Claw",
+        "power": 11,
+        "energy": 7,
+        "dps": 14.47
+      },
+      {
+        "name": "Sucker Punch",
+        "power": 7,
+        "energy": 4,
+        "dps": 10
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dark Pulse",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 18.26
+      },
+      {
+        "name": "Sludge Wave",
+        "power": 70,
+        "energy": -100,
+        "dps": 25.74
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Onix",
+    "baseAttack": 90,
+    "baseDefense": 186,
+    "baseStamina": 70,
+    "fastMoves": [
+      {
+        "name": "Rock Throw",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.03
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Iron Head",
+        "power": 30,
+        "energy": -33,
+        "dps": 15
+      },
+      {
+        "name": "Rock Slide",
+        "power": 50,
+        "energy": -33,
+        "dps": 19.53
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 32.26
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Drowzee",
+    "baseAttack": 104,
+    "baseDefense": 140,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 12.96
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Psybeam",
+        "power": 40,
+        "energy": -25,
+        "dps": 13.16
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Psyshock",
+        "power": 40,
+        "energy": -33,
+        "dps": 18.52
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Hypno",
+    "baseAttack": 162,
+    "baseDefense": 196,
+    "baseStamina": 170,
+    "fastMoves": [
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 14.29
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Psyshock",
+        "power": 40,
+        "energy": -33,
+        "dps": 18.52
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.61
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "name": "Krabby",
+    "baseAttack": 116,
+    "baseDefense": 110,
+    "baseStamina": 60,
+    "fastMoves": [
+      {
+        "name": "Bubble",
+        "power": 25,
+        "energy": 15,
+        "dps": 13.59
+      },
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bubble Beam",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Vice Grip",
+        "power": 25,
+        "energy": -20,
+        "dps": 11.9
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Kingler",
+    "baseAttack": 178,
+    "baseDefense": 168,
+    "baseStamina": 110,
+    "fastMoves": [
+      {
+        "name": "Metal Claw",
+        "power": 8,
+        "energy": 7,
+        "dps": 12.7
+      },
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Vice Grip",
+        "power": 25,
+        "energy": -20,
+        "dps": 11.9
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      },
+      {
+        "name": "X Scissor",
+        "power": 35,
+        "energy": -33,
+        "dps": 16.67
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Voltorb",
+    "baseAttack": 102,
+    "baseDefense": 124,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Spark",
+        "power": 7,
+        "energy": 4,
+        "dps": 12.5
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Discharge",
+        "power": 35,
+        "energy": -33,
+        "dps": 17.5
+      },
+      {
+        "name": "Signal Beam",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.52
+      },
+      {
+        "name": "Thunderbolt",
+        "power": 55,
+        "energy": -50,
+        "dps": 25.46
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Electrode",
+    "baseAttack": 150,
+    "baseDefense": 174,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Spark",
+        "power": 7,
+        "energy": 4,
+        "dps": 12.5
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Discharge",
+        "power": 35,
+        "energy": -33,
+        "dps": 17.5
+      },
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 24
+      },
+      {
+        "name": "Thunderbolt",
+        "power": 55,
+        "energy": -50,
+        "dps": 25.46
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "Exeggcute",
+    "baseAttack": 110,
+    "baseDefense": 132,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Ancient Power",
+        "power": 35,
+        "energy": -25,
+        "dps": 9.72
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Seed Bomb",
+        "power": 40,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Exeggutor",
+    "baseAttack": 232,
+    "baseDefense": 164,
+    "baseStamina": 190,
+    "fastMoves": [
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 14.29
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Seed Bomb",
+        "power": 40,
+        "energy": -33,
+        "dps": 20.83
+      },
+      {
+        "name": "Solar Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30.61
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Cubone",
+    "baseAttack": 102,
+    "baseDefense": 150,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Mud Slap",
+        "power": 15,
+        "energy": 9,
+        "dps": 13.89
+      },
+      {
+        "name": "Rock Smash",
+        "power": 15,
+        "energy": 7,
+        "dps": 10.64
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bone Club",
+        "power": 25,
+        "energy": -25,
+        "dps": 19.53
+      },
+      {
+        "name": "Bulldoze",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.87
+      },
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 15.09
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Marowak",
+    "baseAttack": 140,
+    "baseDefense": 202,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Mud Slap",
+        "power": 15,
+        "energy": 9,
+        "dps": 13.89
+      },
+      {
+        "name": "Rock Smash",
+        "power": 15,
+        "energy": 7,
+        "dps": 10.64
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bone Club",
+        "power": 25,
+        "energy": -25,
+        "dps": 19.53
+      },
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 15.09
+      },
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.76
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Hitmonlee",
+    "baseAttack": 148,
+    "baseDefense": 172,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Rock Smash",
+        "power": 15,
+        "energy": 7,
+        "dps": 13.3
+      },
+      {
+        "name": "Low Kick",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Low Sweep",
+        "power": 30,
+        "energy": -25,
+        "dps": 16.67
+      },
+      {
+        "name": "Stomp",
+        "power": 30,
+        "energy": -25,
+        "dps": 14.29
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 25.81
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Hitmonchan",
+    "baseAttack": 138,
+    "baseDefense": 204,
+    "baseStamina": 100,
+    "fastMoves": [
+      {
+        "name": "Rock Smash",
+        "power": 15,
+        "energy": 7,
+        "dps": 13.3
+      },
+      {
+        "name": "Bullet Punch",
+        "power": 10,
+        "energy": 7,
+        "dps": 8.33
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Brick Break",
+        "power": 30,
+        "energy": -33,
+        "dps": 23.44
+      },
+      {
+        "name": "Fire Punch",
+        "power": 40,
+        "energy": -33,
+        "dps": 14.29
+      },
+      {
+        "name": "Ice Punch",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Thunder Punch",
+        "power": 40,
+        "energy": -33,
+        "dps": 16.67
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Lickitung",
+    "baseAttack": 126,
+    "baseDefense": 160,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 11.43
+      },
+      {
+        "name": "Lick",
+        "power": 5,
+        "energy": 7,
+        "dps": 10
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30
+      },
+      {
+        "name": "Power Whip",
+        "power": 70,
+        "energy": -100,
+        "dps": 25
+      },
+      {
+        "name": "Stomp",
+        "power": 30,
+        "energy": -25,
+        "dps": 17.86
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Koffing",
+    "baseAttack": 136,
+    "baseDefense": 142,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dark Pulse",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Sludge",
+        "power": 30,
+        "energy": -25,
+        "dps": 14.42
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Weezing",
+    "baseAttack": 190,
+    "baseDefense": 198,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Acid",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      },
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dark Pulse",
+        "power": 45,
+        "energy": -33,
+        "dps": 12.86
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.61
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 26.44
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Rhyhorn",
+    "baseAttack": 110,
+    "baseDefense": 116,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Mud Slap",
+        "power": 15,
+        "energy": 9,
+        "dps": 13.89
+      },
+      {
+        "name": "Rock Smash",
+        "power": 15,
+        "energy": 7,
+        "dps": 10.64
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bulldoze",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.87
+      },
+      {
+        "name": "Horn Attack",
+        "power": 25,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Stomp",
+        "power": 30,
+        "energy": -25,
+        "dps": 14.29
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Rhydon",
+    "baseAttack": 166,
+    "baseDefense": 160,
+    "baseStamina": 210,
+    "fastMoves": [
+      {
+        "name": "Mud Slap",
+        "power": 15,
+        "energy": 9,
+        "dps": 13.89
+      },
+      {
+        "name": "Rock Smash",
+        "power": 15,
+        "energy": 7,
+        "dps": 10.64
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.76
+      },
+      {
+        "name": "Megahorn",
+        "power": 80,
+        "energy": -100,
+        "dps": 25
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 32.26
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Chansey",
+    "baseAttack": 40,
+    "baseDefense": 60,
+    "baseStamina": 500,
+    "fastMoves": [
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 16.2
+      },
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 11.43
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dazzling Gleam",
+        "power": 55,
+        "energy": -33,
+        "dps": 13.1
+      },
+      {
+        "name": "Psybeam",
+        "power": 40,
+        "energy": -25,
+        "dps": 10.53
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 19.64
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Tangela",
+    "baseAttack": 164,
+    "baseDefense": 152,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Vine Whip",
+        "power": 7,
+        "energy": 7,
+        "dps": 13.46
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Power Whip",
+        "power": 70,
+        "energy": -100,
+        "dps": 31.25
+      },
+      {
+        "name": "Sludge Bomb",
+        "power": 55,
+        "energy": -50,
+        "dps": 21.15
+      },
+      {
+        "name": "Solar Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30.61
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Kangaskhan",
+    "baseAttack": 142,
+    "baseDefense": 178,
+    "baseStamina": 210,
+    "fastMoves": [
+      {
+        "name": "Mud Slap",
+        "power": 15,
+        "energy": 9,
+        "dps": 11.11
+      },
+      {
+        "name": "Low Kick",
+        "power": 5,
+        "energy": 7,
+        "dps": 8.33
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Brick Break",
+        "power": 30,
+        "energy": -33,
+        "dps": 18.75
+      },
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 23.81
+      },
+      {
+        "name": "Stomp",
+        "power": 30,
+        "energy": -25,
+        "dps": 17.86
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Horsea",
+    "baseAttack": 122,
+    "baseDefense": 100,
+    "baseStamina": 60,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Bubble",
+        "power": 25,
+        "energy": 15,
+        "dps": 13.59
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bubble Beam",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Dragon Pulse",
+        "power": 65,
+        "energy": -50,
+        "dps": 18.06
+      },
+      {
+        "name": "Flash Cannon",
+        "power": 60,
+        "energy": -33,
+        "dps": 15.38
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Seadra",
+    "baseAttack": 176,
+    "baseDefense": 150,
+    "baseStamina": 110,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Dragon Breath",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Blizzard",
+        "power": 100,
+        "energy": -100,
+        "dps": 25.64
+      },
+      {
+        "name": "Dragon Pulse",
+        "power": 65,
+        "energy": -50,
+        "dps": 18.06
+      },
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Goldeen",
+    "baseAttack": 112,
+    "baseDefense": 126,
+    "baseStamina": 90,
+    "fastMoves": [
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      },
+      {
+        "name": "Peck",
+        "power": 10,
+        "energy": 10,
+        "dps": 8.7
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Tail",
+        "power": 45,
+        "energy": -50,
+        "dps": 23.94
+      },
+      {
+        "name": "Horn Attack",
+        "power": 25,
+        "energy": -25,
+        "dps": 11.36
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Seaking",
+    "baseAttack": 172,
+    "baseDefense": 160,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Poison Jab",
+        "power": 15,
+        "energy": 7,
+        "dps": 14.29
+      },
+      {
+        "name": "Peck",
+        "power": 10,
+        "energy": 10,
+        "dps": 8.7
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Drill Run",
+        "power": 50,
+        "energy": -33,
+        "dps": 14.71
+      },
+      {
+        "name": "Icy Wind",
+        "power": 25,
+        "energy": -20,
+        "dps": 6.58
+      },
+      {
+        "name": "Megahorn",
+        "power": 80,
+        "energy": -100,
+        "dps": 25
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Staryu",
+    "baseAttack": 130,
+    "baseDefense": 128,
+    "baseStamina": 60,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 7.52
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bubble Beam",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.93
+      },
+      {
+        "name": "Power Gem",
+        "power": 40,
+        "energy": -33,
+        "dps": 13.79
+      },
+      {
+        "name": "Swift",
+        "power": 30,
+        "energy": -25,
+        "dps": 10
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Starmie",
+    "baseAttack": 194,
+    "baseDefense": 192,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 7.52
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Power Gem",
+        "power": 40,
+        "energy": -33,
+        "dps": 13.79
+      },
+      {
+        "name": "Psybeam",
+        "power": 40,
+        "energy": -25,
+        "dps": 13.16
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Mr Mime",
+    "baseAttack": 154,
+    "baseDefense": 196,
+    "baseStamina": 80,
+    "fastMoves": [
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 14.29
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Psybeam",
+        "power": 40,
+        "energy": -25,
+        "dps": 13.16
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.61
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Scyther",
+    "baseAttack": 176,
+    "baseDefense": 180,
+    "baseStamina": 140,
+    "fastMoves": [
+      {
+        "name": "Steel Wing",
+        "power": 15,
+        "energy": 4,
+        "dps": 11.28
+      },
+      {
+        "name": "Fury Cutter",
+        "power": 3,
+        "energy": 12,
+        "dps": 9.38
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Bug Buzz",
+        "power": 75,
+        "energy": -50,
+        "dps": 22.06
+      },
+      {
+        "name": "Night Slash",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.11
+      },
+      {
+        "name": "X Scissor",
+        "power": 35,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Jynx",
+    "baseAttack": 172,
+    "baseDefense": 134,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Frost Breath",
+        "power": 9,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 12.96
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Draining Kiss",
+        "power": 25,
+        "energy": -20,
+        "dps": 8.93
+      },
+      {
+        "name": "Ice Punch",
+        "power": 45,
+        "energy": -33,
+        "dps": 16.07
+      },
+      {
+        "name": "Psyshock",
+        "power": 40,
+        "energy": -33,
+        "dps": 18.52
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Electabuzz",
+    "baseAttack": 198,
+    "baseDefense": 160,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Thunder Shock",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      },
+      {
+        "name": "Low Kick",
+        "power": 5,
+        "energy": 7,
+        "dps": 8.33
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Thunder",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.07
+      },
+      {
+        "name": "Thunder Punch",
+        "power": 40,
+        "energy": -33,
+        "dps": 20.83
+      },
+      {
+        "name": "Thunderbolt",
+        "power": 55,
+        "energy": -50,
+        "dps": 25.46
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Magmar",
+    "baseAttack": 214,
+    "baseDefense": 158,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      },
+      {
+        "name": "Karate Chop",
+        "power": 6,
+        "energy": 7,
+        "dps": 7.5
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 30.49
+      },
+      {
+        "name": "Fire Punch",
+        "power": 40,
+        "energy": -33,
+        "dps": 17.86
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Pinsir",
+    "baseAttack": 184,
+    "baseDefense": 186,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Rock Smash",
+        "power": 15,
+        "energy": 7,
+        "dps": 10.64
+      },
+      {
+        "name": "Fury Cutter",
+        "power": 3,
+        "energy": 12,
+        "dps": 9.38
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Submission",
+        "power": 30,
+        "energy": -33,
+        "dps": 14.29
+      },
+      {
+        "name": "Vice Grip",
+        "power": 25,
+        "energy": -20,
+        "dps": 11.9
+      },
+      {
+        "name": "X Scissor",
+        "power": 35,
+        "energy": -33,
+        "dps": 20.83
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Tauros",
+    "baseAttack": 148,
+    "baseDefense": 184,
+    "baseStamina": 150,
+    "fastMoves": [
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 11.43
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 23.81
+      },
+      {
+        "name": "Horn Attack",
+        "power": 25,
+        "energy": -25,
+        "dps": 14.2
+      },
+      {
+        "name": "Iron Head",
+        "power": 30,
+        "energy": -33,
+        "dps": 15
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Magikarp",
+    "baseAttack": 42,
+    "baseDefense": 84,
+    "baseStamina": 40,
+    "fastMoves": [
+      {
+        "name": "Splash",
+        "energy": 7,
+        "dps": 0
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Struggle",
+        "power": 15,
+        "energy": -20,
+        "dps": 8.85
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Gyarados",
+    "baseAttack": 192,
+    "baseDefense": 196,
+    "baseStamina": 190,
+    "fastMoves": [
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Dragon Breath",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dragon Pulse",
+        "power": 65,
+        "energy": -50,
+        "dps": 18.06
+      },
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Twister",
+        "power": 25,
+        "energy": -20,
+        "dps": 9.26
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Lapras",
+    "baseAttack": 186,
+    "baseDefense": 190,
+    "baseStamina": 260,
+    "fastMoves": [
+      {
+        "name": "Frost Breath",
+        "power": 9,
+        "energy": 7,
+        "dps": 13.89
+      },
+      {
+        "name": "Ice Shard",
+        "power": 15,
+        "energy": 7,
+        "dps": 13.39
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Blizzard",
+        "power": 100,
+        "energy": -100,
+        "dps": 32.05
+      },
+      {
+        "name": "Dragon Pulse",
+        "power": 65,
+        "energy": -50,
+        "dps": 18.06
+      },
+      {
+        "name": "Ice Beam",
+        "power": 65,
+        "energy": -50,
+        "dps": 22.26
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Ditto",
+    "baseAttack": 110,
+    "baseDefense": 110,
+    "baseStamina": 96,
+    "fastMoves": [
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 16.2
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Struggle",
+        "power": 15,
+        "energy": -20,
+        "dps": 11.06
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Eevee",
+    "baseAttack": 114,
+    "baseDefense": 128,
+    "baseStamina": 110,
+    "fastMoves": [
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 9.4
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 32.05
+      },
+      {
+        "name": "Dig",
+        "power": 70,
+        "energy": -33,
+        "dps": 12.07
+      },
+      {
+        "name": "Swift",
+        "power": 30,
+        "energy": -25,
+        "dps": 12.5
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Vaporeon",
+    "baseAttack": 186,
+    "baseDefense": 168,
+    "baseStamina": 260,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Tail",
+        "power": 45,
+        "energy": -50,
+        "dps": 23.94
+      },
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Jolteon",
+    "baseAttack": 192,
+    "baseDefense": 174,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Thunder Shock",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Discharge",
+        "power": 35,
+        "energy": -33,
+        "dps": 17.5
+      },
+      {
+        "name": "Thunder",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.07
+      },
+      {
+        "name": "Thunderbolt",
+        "power": 55,
+        "energy": -50,
+        "dps": 25.46
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Flareon",
+    "baseAttack": 238,
+    "baseDefense": 178,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 30.49
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      },
+      {
+        "name": "Heat Wave",
+        "power": 80,
+        "energy": -100,
+        "dps": 26.32
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Porygon",
+    "baseAttack": 156,
+    "baseDefense": 158,
+    "baseStamina": 130,
+    "fastMoves": [
+      {
+        "name": "Tackle",
+        "power": 12,
+        "energy": 7,
+        "dps": 13.64
+      },
+      {
+        "name": "Quick Attack",
+        "power": 10,
+        "energy": 7,
+        "dps": 9.4
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Discharge",
+        "power": 35,
+        "energy": -33,
+        "dps": 14
+      },
+      {
+        "name": "Psybeam",
+        "power": 40,
+        "energy": -25,
+        "dps": 10.53
+      },
+      {
+        "name": "Signal Beam",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.52
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Omanyte",
+    "baseAttack": 132,
+    "baseDefense": 160,
+    "baseStamina": 70,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Ancient Power",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.15
+      },
+      {
+        "name": "Brine",
+        "power": 15,
+        "energy": -25,
+        "dps": 7.81
+      },
+      {
+        "name": "Rock Tomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.03
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Omastar",
+    "baseAttack": 180,
+    "baseDefense": 202,
+    "baseStamina": 140,
+    "fastMoves": [
+      {
+        "name": "Water Gun",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Rock Throw",
+        "power": 12,
+        "energy": 7,
+        "dps": 11.03
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Ancient Power",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.15
+      },
+      {
+        "name": "Hydro Pump",
+        "power": 90,
+        "energy": -100,
+        "dps": 29.61
+      },
+      {
+        "name": "Rock Slide",
+        "power": 50,
+        "energy": -33,
+        "dps": 19.53
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Kabuto",
+    "baseAttack": 148,
+    "baseDefense": 142,
+    "baseStamina": 60,
+    "fastMoves": [
+      {
+        "name": "Scratch",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Ancient Power",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.15
+      },
+      {
+        "name": "Aqua Jet",
+        "power": 25,
+        "energy": -20,
+        "dps": 13.3
+      },
+      {
+        "name": "Rock Tomb",
+        "power": 30,
+        "energy": -25,
+        "dps": 11.03
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Kabutops",
+    "baseAttack": 190,
+    "baseDefense": 190,
+    "baseStamina": 120,
+    "fastMoves": [
+      {
+        "name": "Mud Shot",
+        "power": 6,
+        "energy": 7,
+        "dps": 10.91
+      },
+      {
+        "name": "Fury Cutter",
+        "power": 3,
+        "energy": 12,
+        "dps": 7.5
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Ancient Power",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.15
+      },
+      {
+        "name": "Stone Edge",
+        "power": 80,
+        "energy": -100,
+        "dps": 32.26
+      },
+      {
+        "name": "Water Pulse",
+        "power": 35,
+        "energy": -25,
+        "dps": 13.26
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Aerodactyl",
+    "baseAttack": 182,
+    "baseDefense": 162,
+    "baseStamina": 160,
+    "fastMoves": [
+      {
+        "name": "Bite",
+        "power": 6,
+        "energy": 7,
+        "dps": 12
+      },
+      {
+        "name": "Steel Wing",
+        "power": 15,
+        "energy": 4,
+        "dps": 11.28
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Ancient Power",
+        "power": 35,
+        "energy": -25,
+        "dps": 12.15
+      },
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 24
+      },
+      {
+        "name": "Iron Head",
+        "power": 30,
+        "energy": -33,
+        "dps": 15
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Snorlax",
+    "baseAttack": 180,
+    "baseDefense": 180,
+    "baseStamina": 320,
+    "fastMoves": [
+      {
+        "name": "Zen Headbutt",
+        "power": 12,
+        "energy": 4,
+        "dps": 11.43
+      },
+      {
+        "name": "Lick",
+        "power": 5,
+        "energy": 7,
+        "dps": 10
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Body Slam",
+        "power": 40,
+        "energy": -50,
+        "dps": 32.05
+      },
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 23.81
+      },
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 30
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Articuno",
+    "baseAttack": 198,
+    "baseDefense": 242,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Frost Breath",
+        "power": 9,
+        "energy": 7,
+        "dps": 13.89
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Blizzard",
+        "power": 100,
+        "energy": -100,
+        "dps": 32.05
+      },
+      {
+        "name": "Ice Beam",
+        "power": 65,
+        "energy": -50,
+        "dps": 22.26
+      },
+      {
+        "name": "Icy Wind",
+        "power": 25,
+        "energy": -20,
+        "dps": 8.22
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Zapdos",
+    "baseAttack": 232,
+    "baseDefense": 194,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Thunder Shock",
+        "power": 5,
+        "energy": 7,
+        "dps": 10.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Discharge",
+        "power": 35,
+        "energy": -33,
+        "dps": 17.5
+      },
+      {
+        "name": "Thunder",
+        "power": 100,
+        "energy": -100,
+        "dps": 29.07
+      },
+      {
+        "name": "Thunderbolt",
+        "power": 55,
+        "energy": -50,
+        "dps": 25.46
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Moltres",
+    "baseAttack": 242,
+    "baseDefense": 194,
+    "baseStamina": 180,
+    "fastMoves": [
+      {
+        "name": "Ember",
+        "power": 10,
+        "energy": 7,
+        "dps": 11.9
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 30.49
+      },
+      {
+        "name": "Flamethrower",
+        "power": 55,
+        "energy": -50,
+        "dps": 23.71
+      },
+      {
+        "name": "Heat Wave",
+        "power": 80,
+        "energy": -100,
+        "dps": 26.32
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "name": "Dratini",
+    "baseAttack": 128,
+    "baseDefense": 110,
+    "baseStamina": 82,
+    "fastMoves": [
+      {
+        "name": "Dragon Breath",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Tail",
+        "power": 45,
+        "energy": -50,
+        "dps": 19.15
+      },
+      {
+        "name": "Twister",
+        "power": 25,
+        "energy": -20,
+        "dps": 11.57
+      },
+      {
+        "name": "Wrap",
+        "power": 25,
+        "energy": -20,
+        "dps": 6.25
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Dragonair",
+    "baseAttack": 170,
+    "baseDefense": 152,
+    "baseStamina": 122,
+    "fastMoves": [
+      {
+        "name": "Dragon Breath",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Aqua Tail",
+        "power": 45,
+        "energy": -50,
+        "dps": 19.15
+      },
+      {
+        "name": "Dragon Pulse",
+        "power": 65,
+        "energy": -50,
+        "dps": 22.57
+      },
+      {
+        "name": "Wrap",
+        "power": 25,
+        "energy": -20,
+        "dps": 6.25
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Dragonite",
+    "baseAttack": 250,
+    "baseDefense": 212,
+    "baseStamina": 182,
+    "fastMoves": [
+      {
+        "name": "Dragon Breath",
+        "power": 6,
+        "energy": 7,
+        "dps": 15
+      },
+      {
+        "name": "Steel Wing",
+        "power": 15,
+        "energy": 4,
+        "dps": 11.28
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dragon Claw",
+        "power": 35,
+        "energy": -50,
+        "dps": 29.17
+      },
+      {
+        "name": "Dragon Pulse",
+        "power": 65,
+        "energy": -50,
+        "dps": 22.57
+      },
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 24
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Mewtwo",
+    "baseAttack": 284,
+    "baseDefense": 202,
+    "baseStamina": 212,
+    "fastMoves": [
+      {
+        "name": "Psycho Cut",
+        "power": 7,
+        "energy": 7,
+        "dps": 15.35
+      },
+      {
+        "name": "Confusion",
+        "power": 15,
+        "energy": 7,
+        "dps": 12.42
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 24
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Shadow Ball",
+        "power": 45,
+        "energy": -33,
+        "dps": 14.61
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "name": "Mew",
+    "baseAttack": 220,
+    "baseDefense": 220,
+    "baseStamina": 200,
+    "fastMoves": [
+      {
+        "name": "Pound",
+        "power": 7,
+        "energy": 7,
+        "dps": 12.96
+      }
+    ],
+    "chargeMoves": [
+      {
+        "name": "Dragon Pulse",
+        "power": 65,
+        "energy": -50,
+        "dps": 18.06
+      },
+      {
+        "name": "Earthquake",
+        "power": 100,
+        "energy": -100,
+        "dps": 23.81
+      },
+      {
+        "name": "Fire Blast",
+        "power": 100,
+        "energy": -100,
+        "dps": 24.39
+      },
+      {
+        "name": "Hurricane",
+        "power": 80,
+        "energy": -100,
+        "dps": 25
+      },
+      {
+        "name": "Hyper Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 24
+      },
+      {
+        "name": "Moonblast",
+        "power": 85,
+        "energy": -100,
+        "dps": 20.73
+      },
+      {
+        "name": "Psychic",
+        "power": 55,
+        "energy": -50,
+        "dps": 24.55
+      },
+      {
+        "name": "Solar Beam",
+        "power": 120,
+        "energy": -100,
+        "dps": 24.49
+      },
+      {
+        "name": "Thunder",
+        "power": 100,
+        "energy": -100,
+        "dps": 23.26
+      }
+    ]
+  }
+]

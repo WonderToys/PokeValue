@@ -3,16 +3,20 @@ package com.wondertoys.pokevalue;
 import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.graphics.Point;
+import android.graphics.Typeface;
 import android.os.IBinder;
 import android.os.Vibrator;
 import android.support.annotation.Nullable;
+import android.text.Layout;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -23,6 +27,10 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
 
 import com.github.lzyzsd.circleprogress.ArcProgress;
 import com.tomergoldst.tooltips.ToolTip;
@@ -33,6 +41,8 @@ import com.wondertoys.pokevalue.calculator.Pokemon;
 import com.wondertoys.pokevalue.utils.Preferences;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 
 public class CalculateOverlayService extends Service implements View.OnClickListener, View.OnTouchListener,
@@ -73,6 +83,10 @@ public class CalculateOverlayService extends Service implements View.OnClickList
     private View calculateOverlay;
     private View tableForm;
     private View tableResults;
+    private View scrollViewMoreStats;
+
+    private TableLayout tableMoreStats;
+    private TableLayout tableMoveData;
 
     RelativeLayout rootView;
 
@@ -83,6 +97,8 @@ public class CalculateOverlayService extends Service implements View.OnClickList
     private EditText fieldHitPoints;
 
     private CheckBox checkPoweredUp;
+
+    private Button buttonMoreStats;
 
     private ArcProgress minPerfection;
     private ArcProgress maxPerfection;
@@ -229,6 +245,13 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         buttonBack.setOnTouchListener(this);
         buttonBack.setOnLongClickListener(this);
 
+        buttonMoreStats = (Button)calculateOverlay.findViewById(R.id.buttonMoreStats);
+        buttonMoreStats.setClickable(true);
+        buttonMoreStats.setLongClickable(true);
+        buttonMoreStats.setOnClickListener(this);
+        buttonMoreStats.setOnTouchListener(this);
+        buttonMoreStats.setOnLongClickListener(this);
+
         // GetRootView
         rootView = (RelativeLayout)calculateOverlay.findViewById(R.id.rootCalculateLayout);
 
@@ -287,6 +310,15 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         perfectPerfection.setClickable(true);
         perfectPerfection.setOnClickListener(this);
 
+        // More Stats Views
+        scrollViewMoreStats = calculateOverlay.findViewById(R.id.scrollViewMoreStats);
+
+        tableMoreStats = (TableLayout)calculateOverlay.findViewById(R.id.tableMoreStats);
+        tableMoreStats.removeAllViews();
+
+        tableMoveData = (TableLayout)calculateOverlay.findViewById(R.id.tableMoveData);
+        tableMoveData.removeAllViews();
+
         // Add View
         windowManager = (WindowManager)getSystemService(Context.WINDOW_SERVICE);
         windowManager.addView(calculateOverlay, getViewParams());
@@ -315,6 +347,204 @@ public class CalculateOverlayService extends Service implements View.OnClickList
 
         toolTipsManager.show(statsToolTip);
         currentShowingTooltip = v.getId();
+    }
+
+    private View getMoreStatsHeaderRow(LayoutInflater inflater) {
+        TableRow headerRow = (TableRow)inflater.inflate(R.layout.more_stats_row, null);
+
+        TextView rowLevel = (TextView)headerRow.findViewById(R.id.rowLevel);
+        rowLevel.setTypeface(null, Typeface.BOLD);
+        rowLevel.setText("LVL");
+
+        TextView rowAttack = (TextView)headerRow.findViewById(R.id.rowAttack);
+        rowAttack.setTypeface(null, Typeface.BOLD);
+        rowAttack.setText("ATK");
+
+        TextView rowDefense = (TextView)headerRow.findViewById(R.id.rowDefense);
+        rowDefense.setTypeface(null, Typeface.BOLD);
+        rowDefense.setText("DEF");
+
+        TextView rowStamina = (TextView)headerRow.findViewById(R.id.rowStamina);
+        rowStamina.setTypeface(null, Typeface.BOLD);
+        rowStamina.setText("STAM");
+
+        TextView rowCombatPower = (TextView)headerRow.findViewById(R.id.rowCombatPower);
+        rowCombatPower.setTypeface(null, Typeface.BOLD);
+        rowCombatPower.setText("%");
+
+        return headerRow;
+    }
+
+    private View getMoreStatsRow(LayoutInflater inflater, Pokemon.Potential potential) {
+        View row = inflater.inflate(R.layout.more_stats_row, null);
+
+        TextView rowLevel = (TextView)row.findViewById(R.id.rowLevel);
+        rowLevel.setText(String.format("%.1f", potential.level));
+
+        TextView rowAttack = (TextView)row.findViewById(R.id.rowAttack);
+        rowAttack.setText(String.format("%d (%d)", potential.attack, potential.attackIV));
+
+        TextView rowDefense = (TextView)row.findViewById(R.id.rowDefense);
+        rowDefense.setText(String.format("%d (%d)", potential.defense, potential.defenseIV));
+
+        TextView rowStamina = (TextView)row.findViewById(R.id.rowStamina);
+        rowStamina.setText(String.format("%d (%d)", potential.stamina, potential.staminaIV));
+
+        TextView rowCombatPower = (TextView)row.findViewById(R.id.rowCombatPower);
+        rowCombatPower.setText(String.format("%.1f%%", potential.perfection));
+
+        return row;
+    }
+
+    private void buildMoreStatsTable() {
+        LayoutInflater inflater = LayoutInflater.from(this);
+
+        tableMoreStats.removeAllViews();
+
+        tableMoreStats.addView(getMoreStatsHeaderRow(inflater), new TableLayout.LayoutParams(
+                TableLayout.LayoutParams.MATCH_PARENT,
+                TableLayout.LayoutParams.WRAP_CONTENT,
+                1.0f
+        ));
+
+
+        Collections.reverse(potentials);
+        for ( Pokemon.Potential p : potentials ) {
+            tableMoreStats.addView(getMoreStatsRow(inflater, p), new TableLayout.LayoutParams(
+                    TableLayout.LayoutParams.MATCH_PARENT,
+                    TableLayout.LayoutParams.WRAP_CONTENT,
+                    1.0f
+            ));
+        }
+        Collections.reverse(potentials);
+    }
+
+    private View getMoveDataHeaderRow(LayoutInflater inflater) {
+        TableRow headerRow = (TableRow)inflater.inflate(R.layout.move_data_row, null);
+
+        TextView rowLevel = (TextView)headerRow.findViewById(R.id.rowMoveType);
+        rowLevel.setTypeface(null, Typeface.BOLD);
+        rowLevel.setText("TYPE");
+
+        TextView rowAttack = (TextView)headerRow.findViewById(R.id.rowMoveName);
+        rowAttack.setTypeface(null, Typeface.BOLD);
+        rowAttack.setText("NAME");
+
+        TextView rowDefense = (TextView)headerRow.findViewById(R.id.rowMovePower);
+        rowDefense.setTypeface(null, Typeface.BOLD);
+        rowDefense.setText("POW");
+
+        TextView rowStamina = (TextView)headerRow.findViewById(R.id.rowMoveEnergy);
+        rowStamina.setTypeface(null, Typeface.BOLD);
+        rowStamina.setText("ENG");
+
+        TextView rowCombatPower = (TextView)headerRow.findViewById(R.id.rowMoveDPS);
+        rowCombatPower.setTypeface(null, Typeface.BOLD);
+        rowCombatPower.setText("DPS");
+
+        return headerRow;
+    }
+
+    private View getMoveDataRow(LayoutInflater inflater, Pokemon.Move move, String type) {
+        View row = inflater.inflate(R.layout.move_data_row, null);
+
+        TextView rowLevel = (TextView)row.findViewById(R.id.rowMoveType);
+        rowLevel.setText(type);
+
+        TextView rowAttack = (TextView)row.findViewById(R.id.rowMoveName);
+        rowAttack.setText(move.name);
+
+        TextView rowDefense = (TextView)row.findViewById(R.id.rowMovePower);
+        rowDefense.setText(String.format("%d", move.power));
+
+        TextView rowStamina = (TextView)row.findViewById(R.id.rowMoveEnergy);
+        rowStamina.setText(String.format("%d", Math.abs(move.energy)));
+
+        TextView rowCombatPower = (TextView)row.findViewById(R.id.rowMoveDPS);
+        rowCombatPower.setText(String.format("%.2f", move.dps));
+
+        return row;
+    }
+
+    private View getMoveDataSeparatorRow(LayoutInflater inflater) {
+        TableRow headerRow = (TableRow)inflater.inflate(R.layout.move_data_row, null);
+
+        TextView rowLevel = (TextView)headerRow.findViewById(R.id.rowMoveType);
+        rowLevel.setTypeface(null, Typeface.BOLD);
+        rowLevel.setTextColor(Color.parseColor("#AAAAAA"));
+        rowLevel.setText("-");
+
+        TextView rowAttack = (TextView)headerRow.findViewById(R.id.rowMoveName);
+        rowAttack.setTypeface(null, Typeface.BOLD);
+        rowAttack.setTextColor(Color.parseColor("#AAAAAA"));
+        rowAttack.setText("-");
+
+        TextView rowDefense = (TextView)headerRow.findViewById(R.id.rowMovePower);
+        rowDefense.setTypeface(null, Typeface.BOLD);
+        rowDefense.setTextColor(Color.parseColor("#AAAAAA"));
+        rowDefense.setText("-");
+
+        TextView rowStamina = (TextView)headerRow.findViewById(R.id.rowMoveEnergy);
+        rowStamina.setTypeface(null, Typeface.BOLD);
+        rowStamina.setTextColor(Color.parseColor("#AAAAAA"));
+        rowStamina.setText("-");
+
+        TextView rowCombatPower = (TextView)headerRow.findViewById(R.id.rowMoveDPS);
+        rowCombatPower.setTypeface(null, Typeface.BOLD);
+        rowCombatPower.setTextColor(Color.parseColor("#AAAAAA"));
+        rowCombatPower.setText("-");
+
+        return headerRow;
+    }
+
+    private void buildMoveDataTable(Pokemon pokemon) {
+        LayoutInflater inflater = LayoutInflater.from(this);
+
+        tableMoveData.removeAllViews();
+
+        tableMoveData.addView(getMoveDataHeaderRow(inflater), new TableLayout.LayoutParams(
+                TableLayout.LayoutParams.MATCH_PARENT,
+                TableLayout.LayoutParams.WRAP_CONTENT,
+                1.0f
+        ));
+
+
+        for ( int i = 0; i < pokemon.fastMoves.size(); i++ ) {
+            Pokemon.Move m = pokemon.fastMoves.get(i);
+            TableRow row = (TableRow)getMoveDataRow(inflater, m, "FAST");
+
+            if ( i == 0 ) {
+                row.setBackgroundColor(Color.parseColor("#504caf50"));
+            }
+
+            tableMoveData.addView(row, new TableLayout.LayoutParams(
+                    TableLayout.LayoutParams.MATCH_PARENT,
+                    TableLayout.LayoutParams.WRAP_CONTENT,
+                    1.0f
+            ));
+        }
+
+        tableMoveData.addView(getMoveDataSeparatorRow(inflater), new TableLayout.LayoutParams(
+                TableLayout.LayoutParams.MATCH_PARENT,
+                TableLayout.LayoutParams.WRAP_CONTENT,
+                1.0f
+        ));
+
+
+        for ( int i = 0; i < pokemon.chargeMoves.size(); i++ ) {
+            Pokemon.Move m = pokemon.chargeMoves.get(i);
+            TableRow row = (TableRow)getMoveDataRow(inflater, m, "CHARGE");
+
+            if ( i == 0 ) {
+                row.setBackgroundColor(Color.parseColor("#504caf50"));
+            }
+
+            tableMoveData.addView(row, new TableLayout.LayoutParams(
+                    TableLayout.LayoutParams.MATCH_PARENT,
+                    TableLayout.LayoutParams.WRAP_CONTENT,
+                    1.0f
+            ));
+        }
     }
     //endregion
 
@@ -362,6 +592,12 @@ public class CalculateOverlayService extends Service implements View.OnClickList
 
             tableForm = null;
             tableResults = null;
+            tableMoreStats = null;
+            tableMoveData = null;
+
+            scrollViewMoreStats = null;
+
+            buttonMoreStats = null;
 
             rootView = null;
 
@@ -425,7 +661,8 @@ public class CalculateOverlayService extends Service implements View.OnClickList
                 perfectPerfection.setProgress(perfectPotential.cp);
                 perfectPerfection.setSuffixText("");
 
-                //perfectPerfection.setBottomText(Integer.toString(perfectPotential.cp));
+                buildMoreStatsTable();
+                buildMoveDataTable(ed.pokemon);
 
                 Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_out);
                 Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_in);
@@ -444,6 +681,13 @@ public class CalculateOverlayService extends Service implements View.OnClickList
             hideToolTip();
             currentShowingTooltip = -1;
 
+            scrollViewMoreStats.setVisibility(View.GONE);
+
+            tableMoreStats.removeAllViews();
+            tableMoveData.removeAllViews();
+
+            buttonMoreStats.setText("More");
+
             Animation animFadeOut = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_out);
             Animation animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_in);
 
@@ -456,10 +700,22 @@ public class CalculateOverlayService extends Service implements View.OnClickList
             InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(calculateOverlay.getWindowToken(), 0);
         }
+        else if ( v.getId() == R.id.buttonMoreStats ) {
+            if ( scrollViewMoreStats.getVisibility() == View.VISIBLE ) {
+                scrollViewMoreStats.setVisibility(View.GONE);
+                buttonMoreStats.setText("More");
+            }
+            else {
+                scrollViewMoreStats.setVisibility(View.VISIBLE);
+                ((ScrollView)scrollViewMoreStats).smoothScrollTo(0, 0);
+
+                buttonMoreStats.setText("Less");
+            }
+        }
         else if ( v.getId() == R.id.minPerfection ) {
             if ( potentials != null ) {
                 Pokemon.Potential potential = minPotential;
-                String text = String.format(getString(R.string.potential_tooltip), potential.level, potential.cp,
+                String text = String.format(getString(R.string.potential_tooltip), potential.level,
                         potential.attack, potential.attackIV, potential.defense, potential.defenseIV, potential.stamina, potential.staminaIV);
 
                 showToolTip(v, text, ToolTip.ALIGN_LEFT);
@@ -468,7 +724,7 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         else if ( v.getId() == R.id.maxPerfection ) {
             if ( potentials != null ) {
                 Pokemon.Potential potential = maxPotential;
-                String text = String.format(getString(R.string.potential_tooltip), potential.level, potential.cp,
+                String text = String.format(getString(R.string.potential_tooltip), potential.level,
                         potential.attack, potential.attackIV, potential.defense, potential.defenseIV, potential.stamina, potential.staminaIV);
 
                 showToolTip(v, text, ToolTip.ALIGN_CENTER);
@@ -477,7 +733,7 @@ public class CalculateOverlayService extends Service implements View.OnClickList
         else if ( v.getId() == R.id.perfectPerfection ) {
             if ( potentials != null ) {
                 Pokemon.Potential potential = perfectPotential;
-                String text = String.format(getString(R.string.potential_tooltip), potential.level, potential.cp,
+                String text = String.format(getString(R.string.potential_tooltip), potential.level,
                         potential.attack, potential.attackIV, potential.defense, potential.defenseIV, potential.stamina, potential.staminaIV);
 
                 showToolTip(v, text, ToolTip.ALIGN_RIGHT);

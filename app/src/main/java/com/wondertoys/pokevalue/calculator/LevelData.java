@@ -12,11 +12,11 @@ import java.util.HashMap;
 
 public final class LevelData {
     //region - Fields -
-    private static HashMap<Double, Double> stats;
+    private static HashMap<Double, Float> stats;
     //region
 
     //region - Static -
-    public static double getCpScalar(double level) {
+    public static float getCpScalar(double level) {
         return stats.get(level);
     }
 
@@ -43,7 +43,7 @@ public final class LevelData {
                 JSONObject obj = array.getJSONObject(i);
 
                 double level = obj.getDouble("level");
-                double cpScalar = obj.getDouble("cpScalar");
+                float cpScalar = (float)obj.getDouble("cpScalar");
 
                 stats.put(level, cpScalar);
             }

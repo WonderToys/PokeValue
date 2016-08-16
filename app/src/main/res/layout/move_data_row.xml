@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_weight="0.2"
+        android:id="@+id/rowMoveType"
+        android:text=""
+        android:textColor="#333" />
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_weight="0.2"
+        android:id="@+id/rowMoveName"
+        android:text=""
+        android:textColor="#333" />
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_weight="0.2"
+        android:id="@+id/rowMovePower"
+        android:text=""
+        android:textColor="#333" />
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_weight="0.2"
+        android:id="@+id/rowMoveEnergy"
+        android:text=""
+        android:textColor="#333" />
+
+    <TextView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_weight="0.2"
+        android:id="@+id/rowMoveDPS"
+        android:text=""
+        android:textColor="#333" />
+</TableRow>

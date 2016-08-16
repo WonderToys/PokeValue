@@ -4,7 +4,7 @@
 
     <string name="potential_tooltip" formatted="false">
         <![CDATA[
-            Level: %.1f; CP: %d\nAtk: %d (%d); Def: %d (%d); Stam: %d (%d)
+            Level: %.1f\nAtk: %d (%d); Def: %d (%d); Stam: %d (%d)
         ]]>
     </string>
 
