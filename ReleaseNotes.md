@@ -4,6 +4,9 @@
 
 # Release Notes
 
+### v0.6.1
+- Fixed major issue where the pokemon data wasn't being loaded due to our friend the Magikarp. I suck at testing :(
+
 ### v0.6.0
 - Removed display of CP from tooltips when tapping a potential perfection. It wasn't helpful, IMO
 - Added "More" button to results screen to view possible levels, stats, and the potential moves of the Pokemon

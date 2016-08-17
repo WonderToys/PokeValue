@@ -5196,6 +5196,7 @@
     "fastMoves": [
       {
         "name": "Splash",
+        "power": 0,
         "energy": 7,
         "dps": 0
       }
